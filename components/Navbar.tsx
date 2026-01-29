@@ -1,107 +1,158 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/certifications", label: "Certifications" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
-    <nav className="bg-blue-800 shadow-lg fixed top-0 w-full z-20">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-3xl font-extrabold text-white tracking-wider">
-          <Link href="/">Haris</Link>
-        </div>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "py-3 bg-[#030014]/80 backdrop-blur-xl border-b border-white/5"
+          : "py-5 bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <span className="text-2xl font-mono font-bold">
+              <span className="text-indigo-400">{"{"}</span>
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">H</span>
+              <span className="text-purple-500">{"}"}</span>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+          <span className="text-xl font-bold tracking-tight">
+            <span className="gradient-text">Haris</span>
+            <span className="text-gray-500 font-light">.dev</span>
+          </span>
+        </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-white font-semibold">
-          <li>
-            <Link
-              href="/"
-              className="hover:text-blue-400 transition duration-300"
+        <ul className="hidden md:flex items-center gap-1">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className={`relative px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
+                  isActive(link.href)
+                    ? "text-white"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {isActive(link.href) && (
+                  <span className="absolute inset-0 rounded-xl bg-white/5 border border-white/10" />
+                )}
+                <span className="relative">{link.label}</span>
+              </Link>
+            </li>
+          ))}
+          <li className="ml-4">
+            <a
+              href="https://github.com/harisawan27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
             >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/about"
-              className="hover:text-blue-400 transition duration-300"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/projects"
-              className="hover:text-blue-400 transition duration-300"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="hover:text-blue-400 transition duration-300"
-            >
-              Contact
-            </Link>
+              <i className="fab fa-github" />
+              GitHub
+            </a>
           </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-white text-2xl focus:outline-none"
+          className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10"
           onClick={toggleMenu}
+          aria-label="Toggle menu"
         >
-          <i className={`fas ${isOpen ? "fa-times" : "fa-bars"}`}></i>
-        </button>
-
-        {/* Mobile Dropdown Menu */}
-        {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-blue-800 shadow-lg text-center">
-            <ul className="space-y-6 py-6 text-white font-medium">
-              <li>
-                <Link
-                  href="/"
-                  className="block hover:text-blue-400 transition duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="block hover:text-blue-400 transition duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="block hover:text-blue-400 transition duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="block hover:text-blue-400 transition duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <div className="relative w-5 h-4 flex flex-col justify-between">
+            <span
+              className={`block h-0.5 bg-white rounded-full transition-all duration-300 ${
+                isOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 bg-white rounded-full transition-all duration-300 ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 bg-white rounded-full transition-all duration-300 ${
+                isOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            />
           </div>
-        )}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-[#030014]/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${
+          isOpen
+            ? "opacity-100 visible translate-y-0"
+            : "opacity-0 invisible -translate-y-4"
+        }`}
+      >
+        <ul className="container mx-auto px-6 py-6 space-y-2">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  isActive(link.href)
+                    ? "text-white bg-white/5"
+                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          <li className="pt-4">
+            <a
+              href="https://github.com/harisawan27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              <i className="fab fa-github" />
+              View GitHub
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

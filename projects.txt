@@ -1,0 +1,71 @@
+**Project Name:** LibasG - A Clothing Store
+  **Description:** The LibasG platform integrates Sanity CMS with a custom API to manage products seamlessly. It allows for product CRUD operations, fetching product data from Sanity CMS, and displaying it within a Next.js application.
+  **Live Link:** https://frontend-hackathon-3-q2.vercel.app/
+  **Category:** websites
+  **Tags:** Next.js, Sanity CMS, Tailwind CSS
+  **Featured:** no
+  **Image:** libasg.png
+
+**Project Name:** DevHaven - A Blog Website
+  **Description:** DevHaven, a place where technology, design, and creativity collide. We aim to deliver valuable content on web development, UI/UX, coding practices, and much more.
+  **Live Link:** https://devhaven-nextjs-assignment03.vercel.app/
+  **Category:** websites
+  **Tags:** Next.js, TypeScript, Tailwind CSS
+  **Featured:** no
+  **Image:** devhaven.png
+
+**Project Name:** Universal Unit Converter
+  **Description:** Universal Unit Converter built with Streamlit
+  **Live Link:** https://unit-converter-haris.streamlit.app/
+  **Category:** tools
+  **Tags:** Python, Streamlit
+  **Featured:** no
+  **Image:** unit_converter.png
+
+**Project Name:** Password Strength Checker
+  **Description:** Password Strength Checker built with Streamlit
+  **Live Link:** https://password-strength-meter-haris.streamlit.app/
+  **Category:** tools
+  **Tags:** Python, Streamlit
+  **Featured:** no
+  **Image:** password_checker.png
+
+**Project Name:** My Library Manager
+  **Description:** My Library Manager built with Streamlit
+  **Live Link:** https://personal-library-manager-haris.streamlit.app/
+  **Category:** tools
+  **Tags:** Python, Streamlit
+  **Featured:** no
+  **Image:** library_manager.png
+
+**Project Name:** RehnumaAI - Your Smart Study Guide
+  **Description:** RehnumaAI is a web app built with Next.js, TypeScript, Gemini, and Firebase. It gives students a friendly chat space where they can ask study questions, upload documents or images, and get answers instantly with streaming replies. 
+  **Live Link:** https://rehnumaai-7f4c1.web.app/
+  **Category:** web-app
+  **Tags:** Next.js, Agentic AI, Firebase
+  **Featured:** yes
+  **Image:** rehnuma_ai.png
+
+**Project Name:** Physical AI & Humanoid Robotics - Capstone Book
+  **Description:** This project is built with Docusaurus and serves as a comprehensive guide for engineering students and professionals venturing into the world of humanoid robotics, physical AI, and robot learning. With a RAG Chatbot (Retrieval-Augmented Generation) Built with FastAPI, Google Gemini, Neon Serverless Postgres, and Qdrant Cloud, this chatbot understands the book's full context.
+  **Live Link:** https://q4-book-hackathon-1.vercel.app/
+  **Category:** websites
+  **Tags:** Docusaurus, FastAPI, Qdrant Cloud
+  **Featured:** yes
+  **Image:** book.png
+
+**Project Name:** DoneKaro - AI Powered Todo App
+  **Description:** An AI powered full-stack task management application designed for individual productivity. Powered with DoneKaro AI chatbot that serves as your AI Assistant.
+  **Live Link:** https://q4-todo-hackathon.vercel.app/
+  **Category:** web-app
+  **Tags:** Next.js, FastAPI, PostgreSQL (Neon)
+  **Featured:** yes
+  **Image:** donekaro.png
+
+**Project Name:** WEBXES LLC - High-Performance US-Based Agency
+  **Description:** WEBXES is a modern web design & development partner that build scalable websites, ecommerce platforms, and apps.
+  **Live Link:** https://www.webxes.com/
+  **Category:** website
+  **Tags:** Next.js, React, Tailwind
+  **Featured:** yes
+  **Image:** webxes.png
