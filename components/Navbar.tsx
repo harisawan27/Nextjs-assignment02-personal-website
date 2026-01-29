@@ -53,8 +53,7 @@ export default function Navbar() {
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <span className="text-xl font-bold tracking-tight">
-            <span className="gradient-text">Haris</span>
-            <span className="text-gray-500 font-light">.dev</span>
+            <span className="gradient-text">Haris Awan</span>
           </span>
         </Link>
 
