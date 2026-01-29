@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -145,6 +146,7 @@ export default function RootLayout({
           }}
         />
       </head>
+      <Analytics/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030014] text-white min-h-screen`}
       >

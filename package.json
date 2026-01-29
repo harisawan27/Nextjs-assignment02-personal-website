@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@types/nodemailer": "^7.0.9",
+    "@vercel/analytics": "^1.6.1",
     "next": "^15.1.0",
     "nodemailer": "^7.0.13",
     "pdfjs-dist": "^5.4.530",
