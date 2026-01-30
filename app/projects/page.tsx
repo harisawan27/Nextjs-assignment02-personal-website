@@ -263,7 +263,7 @@ export default function Projects() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
         <div className="bg-grid absolute inset-0" />
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -280,25 +280,25 @@ export default function Projects() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12 max-w-4xl mx-auto">
-              <div className="text-center p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-3xl font-bold gradient-text mb-1">23+</div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mt-12 max-w-4xl mx-auto">
+              <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">23+</div>
                 <div className="text-xs text-gray-400">Total Projects</div>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-3xl font-bold gradient-text mb-1">10</div>
+              <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10</div>
                 <div className="text-xs text-gray-400">Web Apps</div>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-3xl font-bold gradient-text mb-1">4</div>
+              <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">4</div>
                 <div className="text-xs text-gray-400">Websites</div>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-3xl font-bold gradient-text mb-1">8</div>
+              <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">8</div>
                 <div className="text-xs text-gray-400">Tools</div>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-3xl font-bold gradient-text mb-1">1</div>
+              <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5 col-span-2 sm:col-span-1">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">1</div>
                 <div className="text-xs text-gray-400">Games</div>
               </div>
             </div>
@@ -416,9 +416,9 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="relative p-12 rounded-3xl overflow-hidden text-center">
+          <div className="relative p-6 sm:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
             <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
@@ -450,48 +450,48 @@ export default function Projects() {
       {/* Project Modal */}
       {selectedProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0a0a1f] border border-white/10"
+            className="relative w-full max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl bg-[#0a0a1f] border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
             >
-              <i className="fas fa-times text-white" />
+              <i className="fas fa-times text-white text-sm sm:text-base" />
             </button>
 
             {/* Modal Image */}
-            <div className="relative h-64 md:h-80">
+            <div className="relative h-48 sm:h-64 md:h-80">
               <Image
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 fill
-                className="object-cover rounded-t-3xl"
+                className="object-cover rounded-t-2xl sm:rounded-t-3xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1f] via-transparent to-transparent" />
 
               {/* Featured badge */}
               {selectedProject.featured && (
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-xs font-semibold flex items-center gap-1">
-                  <i className="fas fa-star text-[10px]" />
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 px-2 sm:px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-[10px] sm:text-xs font-semibold flex items-center gap-1">
+                  <i className="fas fa-star text-[8px] sm:text-[10px]" />
                   Featured
                 </div>
               )}
             </div>
 
             {/* Modal Content */}
-            <div className="p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 {selectedProject.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                    className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
                   >
                     {tag}
                   </span>
@@ -499,12 +499,12 @@ export default function Projects() {
               </div>
 
               {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
                 {selectedProject.title}
               </h2>
 
               {/* Full Description */}
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                 {selectedProject.description}
               </p>
 
@@ -513,7 +513,7 @@ export default function Projects() {
                 href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity text-sm sm:text-base"
               >
                 Visit Project
                 <i className="fas fa-external-link-alt" />

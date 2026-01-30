@@ -133,7 +133,7 @@ export default function Certifications() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
         <div className="bg-grid absolute inset-0" />
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -150,29 +150,29 @@ export default function Certifications() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">{certificates.length}</div>
-              <div className="text-sm text-gray-400">Certifications</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-16">
+            <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">{certificates.length}</div>
+              <div className="text-xs sm:text-sm text-gray-400">Certifications</div>
             </div>
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">5+</div>
-              <div className="text-sm text-gray-400">Skill Areas</div>
+            <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">5+</div>
+              <div className="text-xs sm:text-sm text-gray-400">Skill Areas</div>
             </div>
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">4+</div>
-              <div className="text-sm text-gray-400">Issuers</div>
+            <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">4+</div>
+              <div className="text-xs sm:text-sm text-gray-400">Issuers</div>
             </div>
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">2023-24</div>
-              <div className="text-sm text-gray-400">Years Active</div>
+            <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+              <div className="text-xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">2023-24</div>
+              <div className="text-xs sm:text-sm text-gray-400">Years Active</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certificates Grid */}
-      <section className="relative py-10 px-6">
+      <section className="relative py-6 sm:py-10 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert) => (
@@ -214,18 +214,18 @@ export default function Certifications() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                <div className="p-4 sm:p-6">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3">
                     <i className="fas fa-building" />
-                    <span>{cert.issuer}</span>
+                    <span className="truncate">{cert.issuer}</span>
                     <span className="text-gray-700">•</span>
                     <i className="fas fa-calendar" />
                     <span>{cert.date}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-4 group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 group-hover:text-indigo-400 transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
-                  <div className="inline-flex items-center gap-2 text-sm text-indigo-400">
+                  <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-indigo-400">
                     <span>Click to Preview</span>
                     <i className="fas fa-arrow-right text-xs" />
                   </div>
@@ -237,9 +237,9 @@ export default function Certifications() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="relative p-12 rounded-3xl overflow-hidden text-center">
+          <div className="relative p-6 sm:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
             <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
@@ -275,7 +275,7 @@ export default function Certifications() {
       {/* Modal for Full Certificate Preview */}
       {selectedCert && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-8"
           onClick={closeModal}
         >
           {/* Backdrop */}
@@ -283,23 +283,23 @@ export default function Certifications() {
 
           {/* Modal Content */}
           <div
-            className="relative w-full max-w-6xl h-[90vh] bg-[#0a0a1a] rounded-2xl border border-white/10 overflow-hidden flex flex-col"
+            className="relative w-full max-w-6xl h-[95vh] sm:h-[90vh] bg-[#0a0a1a] rounded-xl sm:rounded-2xl border border-white/10 overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/50">
-              <div>
-                <h3 className="text-lg font-semibold">{selectedCert.title}</h3>
-                <p className="text-sm text-gray-400">
+            <div className="flex items-start sm:items-center justify-between p-3 sm:p-4 border-b border-white/10 bg-black/50 gap-2">
+              <div className="min-w-0 flex-1">
+                <h3 className="text-sm sm:text-lg font-semibold truncate">{selectedCert.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-400 truncate">
                   {selectedCert.issuer} • {selectedCert.date}
                 </p>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
                 <a
                   href={selectedCert.file}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm hover:bg-white/10 transition-colors flex items-center gap-1 sm:gap-2"
                 >
                   <i className="fas fa-external-link-alt" />
                   <span className="hidden sm:inline">Open in New Tab</span>
@@ -307,16 +307,16 @@ export default function Certifications() {
                 <a
                   href={selectedCert.file}
                   download
-                  className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
+                  className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm hover:bg-white/10 transition-colors flex items-center gap-1 sm:gap-2"
                 >
                   <i className="fas fa-download" />
                   <span className="hidden sm:inline">Download</span>
                 </a>
                 <button
                   onClick={closeModal}
-                  className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-500/20 hover:border-red-500/50 transition-colors"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-500/20 hover:border-red-500/50 transition-colors"
                 >
-                  <i className="fas fa-times" />
+                  <i className="fas fa-times text-sm sm:text-base" />
                 </button>
               </div>
             </div>
@@ -324,7 +324,7 @@ export default function Certifications() {
             {/* Preview Area */}
             <div className="flex-1 overflow-auto bg-gray-900/50">
               {selectedCert.type === "image" ? (
-                <div className="relative w-full h-full min-h-[500px] p-4">
+                <div className="relative w-full h-full min-h-[300px] sm:min-h-[500px] p-2 sm:p-4">
                   <Image
                     src={selectedCert.file}
                     alt={selectedCert.title}
@@ -336,7 +336,7 @@ export default function Certifications() {
               ) : (
                 <iframe
                   src={selectedCert.file}
-                  className="w-full h-full min-h-[600px]"
+                  className="w-full h-full min-h-[400px] sm:min-h-[600px]"
                   title={selectedCert.title}
                 />
               )}

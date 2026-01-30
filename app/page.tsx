@@ -50,28 +50,28 @@ const services = [
 
 const featuredProjects = [
   {
-    title: "Interactive Resume Builder",
+    title: "WEBXES LLC",
     description:
-      "A fully dynamic, editable, and shareable online resume builder with real-time preview.",
-    image: "/images/project_1.png",
-    link: "https://my-interactive-resume.vercel.app/",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+      "A modern web design & development partner that builds scalable websites, ecommerce platforms, and apps.",
+    image: "/images/webxes.png",
+    link: "https://www.webxes.com/",
+    tags: ["Next.js", "React", "Tailwind"],
   },
   {
-    title: "Weather Widget App",
+    title: "DoneKaro - AI Powered Todo App",
     description:
-      "A beautiful widget to display current weather with location-based forecasts.",
-    image: "/images/project_2.png",
-    link: "https://day2weatherwidget.vercel.app/",
-    tags: ["React", "API", "CSS"],
+      "An AI powered full-stack task management app with DoneKaro AI chatbot assistant. Available as web and Android app.",
+    image: "/images/donekaro.png",
+    link: "https://q4-todo-hackathon.vercel.app/",
+    tags: ["Next.js", "FastAPI", "PostgreSQL"],
   },
   {
-    title: "Movie Search App",
+    title: "RehnumaAI - Smart Study Guide",
     description:
-      "Search for movies and discover detailed information with a modern interface.",
-    image: "/images/project_7.png",
-    link: "https://day16moviesearch.vercel.app/",
-    tags: ["React", "OMDB API", "Tailwind"],
+      "A web app where students can ask study questions, upload documents or images, and get instant AI-powered answers.",
+    image: "/images/rehnuma_ai.png",
+    link: "https://rehnumaai-7f4c1.web.app/",
+    tags: ["Next.js", "Gemini AI", "Firebase"],
   },
 ];
 
@@ -111,14 +111,14 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center py-20 px-6">
+      <section className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6">
         <div className="bg-grid absolute inset-0" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             {/* Text Content */}
             <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mt-16 sm:mt-0 mb-8 animate-fade-in">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-sm text-gray-300">
                   Available for freelance & collaborations
@@ -190,16 +190,16 @@ export default function Home() {
                 </div>
 
                 {/* Floating badges */}
-                <div className="absolute -top-4 -right-4 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-sm font-medium shadow-lg animate-float">
-                  <i className="fab fa-react mr-2" />
+                <div className="absolute -top-4 -right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
+                  <i className="fab fa-react mr-1 sm:mr-2" />
                   Next.js
                 </div>
-                <div className="absolute -bottom-4 -left-4 px-4 py-2 rounded-xl bg-gradient-to-r from-green-500 to-teal-500 text-sm font-medium shadow-lg animate-float-delayed">
-                  <i className="fab fa-python mr-2" />
+                <div className="absolute -bottom-4 -left-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-green-500 to-teal-500 text-xs sm:text-sm font-medium shadow-lg animate-float-delayed">
+                  <i className="fab fa-python mr-1 sm:mr-2" />
                   Python
                 </div>
-                <div className="absolute top-1/2 -right-8 px-4 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 text-sm font-medium shadow-lg animate-float">
-                  <i className="fas fa-robot mr-2" />
+                <div className="absolute top-1/2 -right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
+                  <i className="fas fa-robot mr-1 sm:mr-2" />
                   Agentic AI
                 </div>
               </div>
@@ -210,8 +210,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        {/* Scroll indicator - hidden on mobile */}
+        <div className="hidden sm:block absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
             <div className="w-1 h-2 rounded-full bg-white/50" />
           </div>
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-16 sm:py-32 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1 order-2 lg:order-1">
@@ -305,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-16 sm:py-32 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -338,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-16 sm:py-32 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
             <div>
@@ -405,9 +405,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-16 sm:py-32 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="relative p-12 md:p-16 rounded-3xl overflow-hidden">
+          <div className="relative p-6 sm:p-12 md:p-16 rounded-2xl sm:rounded-3xl overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
             <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
@@ -422,19 +422,19 @@ export default function Home() {
                 AI-powered solution, I&apos;m here to bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="/contact" className="btn-primary">
-                  <span className="flex items-center gap-2">
+                <Link href="/contact" className="btn-primary w-full sm:w-auto">
+                  <span className="flex items-center justify-center gap-2">
                     <i className="fas fa-paper-plane" />
                     Start a Conversation
                   </span>
                 </Link>
                 <a
                   href="mailto:111harisawan@gmail.com"
-                  className="btn-secondary"
+                  className="btn-secondary w-full sm:w-auto"
                 >
-                  <span className="flex items-center gap-2">
+                  <span className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base">
                     <i className="fas fa-envelope" />
-                    111harisawan@gmail.com
+                    <span className="truncate">111harisawan@gmail.com</span>
                   </span>
                 </a>
               </div>

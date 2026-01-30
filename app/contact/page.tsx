@@ -13,10 +13,10 @@ const contactInfo = [
     gradient: "from-indigo-500 to-purple-500",
   },
   {
-    icon: "fas fa-phone",
-    label: "Phone",
+    icon: "fab fa-whatsapp",
+    label: "WhatsApp",
     value: "+92 336 1232724",
-    href: "tel:+923361232724",
+    href: "https://wa.me/923361232724",
     gradient: "from-green-500 to-teal-500",
   },
   {
@@ -122,7 +122,7 @@ export default function Contact() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
         <div className="bg-grid absolute inset-0" />
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -142,7 +142,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Form */}
             <div className="order-2 lg:order-1">
-              <div className="relative p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/10">
+              <div className="relative p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-white/10">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
 
                 {submitted ? (
@@ -182,7 +182,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors"
-                          placeholder="John Doe"
+                          placeholder="Your Name"
                         />
                       </div>
                       <div>
@@ -200,7 +200,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors"
-                          placeholder="john@example.com"
+                          placeholder="you@example.com"
                         />
                       </div>
                     </div>
@@ -270,31 +270,31 @@ export default function Contact() {
 
             {/* Contact Info */}
             <div className="order-1 lg:order-2">
-              <div className="space-y-6 mb-12">
+              <div className="space-y-4 sm:space-y-6 mb-12">
                 {contactInfo.map((info, index) => (
                   <div
                     key={index}
-                    className="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300"
+                    className="group p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300"
                   >
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-3 sm:gap-5">
                       <div
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${info.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <i className={`${info.icon} text-xl text-white`} />
+                        <i className={`${info.icon} text-lg sm:text-xl text-white`} />
                       </div>
-                      <div>
-                        <p className="text-sm text-gray-500 mb-1">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-xs sm:text-sm text-gray-500 mb-1">
                           {info.label}
                         </p>
                         {info.href ? (
                           <a
                             href={info.href}
-                            className="text-lg font-medium hover:text-indigo-400 transition-colors"
+                            className="text-sm sm:text-lg font-medium hover:text-indigo-400 transition-colors block truncate"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-lg font-medium">{info.value}</p>
+                          <p className="text-sm sm:text-lg font-medium truncate">{info.value}</p>
                         )}
                       </div>
                     </div>
@@ -304,10 +304,10 @@ export default function Contact() {
 
               {/* Social Links */}
               <div>
-                <h3 className="text-xl font-semibold mb-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">
                   Connect on Social Media
                 </h3>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -315,7 +315,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className={`w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-xl transition-all duration-300 hover:-translate-y-1 ${social.color}`}
+                      className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-lg sm:text-xl transition-all duration-300 hover:-translate-y-1 ${social.color}`}
                     >
                       <i className={social.icon} />
                     </a>
@@ -340,7 +340,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="section-title">
@@ -353,19 +353,23 @@ export default function Contact() {
             {[
               {
                 q: "What services do you offer?",
-                a: "I offer full-stack web development, Agentic AI development, UI/UX design, eCommerce solutions, backend development, and AI integration services.",
+                a: "I specialize in full-stack web development using Next.js, Agentic AI development with OpenAI SDK & Python, UI/UX design, eCommerce solutions, backend development, and AI integration for existing applications.",
               },
               {
                 q: "What is your typical project timeline?",
-                a: "Project timelines vary based on complexity. A simple website may take 1-2 weeks, while more complex applications can take 4-8 weeks or more.",
+                a: "A simple landing page or portfolio takes 2-4 days. Business websites with multiple pages take about 1 week. Complex web apps or AI-powered solutions typically require 2-4 weeks depending on features.",
               },
               {
-                q: "Do you offer ongoing maintenance?",
-                a: "Yes, I offer ongoing maintenance and support packages to ensure your project stays up-to-date and running smoothly.",
+                q: "Do you work with international clients?",
+                a: "Yes, I work with clients worldwide. Being based in Pakistan, I'm flexible with communication across different time zones via email, WhatsApp, or video calls.",
+              },
+              {
+                q: "What technologies do you use?",
+                a: "For frontend, I use Next.js, React, TypeScript, and Tailwind CSS. For backend, Node.js, Python, and FastAPI. For AI projects, I work with OpenAI SDK, Google Gemini API, and Firebase.",
               },
               {
                 q: "How do we get started?",
-                a: "Simply send me a message through the contact form or email me directly. We'll schedule a call to discuss your project requirements.",
+                a: "Simply send me a message through the contact form, email, or WhatsApp. We'll discuss your requirements and I'll provide a project proposal with timeline and cost estimate.",
               },
             ].map((faq, index) => (
               <details
@@ -384,9 +388,9 @@ export default function Contact() {
       </section>
 
       {/* Map/Location Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="relative p-8 md:p-12 rounded-3xl overflow-hidden text-center">
+          <div className="relative p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
             <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />

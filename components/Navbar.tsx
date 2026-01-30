@@ -43,17 +43,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-3">
-          <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-            <span className="text-2xl font-mono font-bold">
-              <span className="text-indigo-400">{"{"}</span>
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">H</span>
-              <span className="text-purple-500">{"}"}</span>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-          </div>
-          <span className="text-xl font-bold tracking-tight">
-            <span className="gradient-text">Haris Awan</span>
+        <Link href="/" className="group">
+          <span className="text-xl font-bold text-white tracking-tight transition-opacity duration-300 group-hover:opacity-80">
+            Haris Awan
           </span>
         </Link>
 

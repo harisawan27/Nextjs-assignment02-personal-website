@@ -49,19 +49,13 @@ export default function Footer() {
       {/* Gradient line at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
 
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <span className="text-2xl font-mono font-bold transition-transform duration-300 group-hover:scale-110">
-                <span className="text-indigo-400">{"{"}</span>
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">H</span>
-                <span className="text-purple-500">{"}"}</span>
-              </span>
-              <span className="text-xl font-bold">
-                <span className="gradient-text">Haris</span>
-                <span className="text-gray-500 font-light">.dev</span>
+            <Link href="/" className="inline-block mb-6 group">
+              <span className="text-xl font-bold text-white tracking-tight transition-opacity duration-300 group-hover:opacity-80">
+                Haris Awan
               </span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
@@ -109,23 +103,25 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:111harisawan@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-3"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-3 text-sm sm:text-base"
                 >
-                  <i className="fas fa-envelope text-indigo-500" />
-                  111harisawan@gmail.com
+                  <i className="fas fa-envelope text-indigo-500 flex-shrink-0" />
+                  <span className="truncate">111harisawan@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+923361232724"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-3"
+                  href="https://wa.me/923361232724"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-3 text-sm sm:text-base"
                 >
-                  <i className="fas fa-phone text-indigo-500" />
+                  <i className="fab fa-whatsapp text-indigo-500 flex-shrink-0" />
                   +92 336 1232724
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <i className="fas fa-map-marker-alt text-indigo-500" />
+              <li className="flex items-center gap-3 text-gray-400 text-sm sm:text-base">
+                <i className="fas fa-map-marker-alt text-indigo-500 flex-shrink-0" />
                 Karachi, Pakistan
               </li>
             </ul>
@@ -133,13 +129,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
+        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center">
+          <p className="text-gray-500 text-xs sm:text-sm">
             &copy; {currentYear} Haris Awan. All rights reserved.
           </p>
-          <p className="text-gray-500 text-sm flex items-center gap-2">
+          <p className="text-gray-500 text-xs sm:text-sm flex items-center gap-2">
             Built with{" "}
-            <i className="fas fa-heart text-red-500 animate-pulse text-xs" />{" "}
+            <i className="fas fa-heart text-red-500 animate-pulse text-[10px] sm:text-xs" />{" "}
             using Next.js & Tailwind CSS
           </p>
         </div>

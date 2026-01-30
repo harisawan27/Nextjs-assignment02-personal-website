@@ -1,7 +1,14 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Muhammad Haris Awan - Full Stack Developer & Agentic AI Engineer specializing in Next.js, Python, and AI solutions.",
+};
 
 const techStack = [
   { name: "HTML5", icon: "fab fa-html5", color: "text-orange-500" },
@@ -145,7 +152,7 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
         <div className="bg-grid absolute inset-0" />
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -209,11 +216,11 @@ export default function About() {
               </p>
 
               {/* Quick Info */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <i className="fas fa-map-marker-alt text-indigo-400" />
-                    <div>
+                    <i className="fas fa-map-marker-alt text-indigo-400 flex-shrink-0" />
+                    <div className="min-w-0">
                       <p className="text-xs text-gray-500">Location</p>
                       <p className="text-sm font-medium">Karachi, Pakistan</p>
                     </div>
@@ -221,10 +228,10 @@ export default function About() {
                 </div>
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <i className="fas fa-envelope text-indigo-400" />
-                    <div>
+                    <i className="fas fa-envelope text-indigo-400 flex-shrink-0" />
+                    <div className="min-w-0">
                       <p className="text-xs text-gray-500">Email</p>
-                      <p className="text-sm font-medium">111harisawan@gmail.com</p>
+                      <p className="text-sm font-medium truncate">111harisawan@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -252,7 +259,7 @@ export default function About() {
       </section>
 
       {/* What I Do Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -281,7 +288,7 @@ export default function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -312,7 +319,7 @@ export default function About() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -323,7 +330,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-4">
+          <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-3 sm:gap-4">
             {techStack.map((tech, index) => (
               <div
                 key={index}
@@ -352,7 +359,7 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -405,7 +412,7 @@ export default function About() {
       </section>
 
       {/* Connect Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="section-title">
@@ -437,9 +444,9 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="relative p-12 rounded-3xl overflow-hidden text-center">
+          <div className="relative p-6 sm:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
             <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
