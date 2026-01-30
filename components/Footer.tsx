@@ -129,14 +129,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center">
-          <p className="text-gray-500 text-xs sm:text-sm">
-            &copy; {currentYear} Haris Awan. All rights reserved.
-          </p>
+        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/5 flex justify-center items-center text-center">
           <p className="text-gray-500 text-xs sm:text-sm flex items-center gap-2">
-            Built with{" "}
-            <i className="fas fa-heart text-red-500 animate-pulse text-[10px] sm:text-xs" />{" "}
-            using Next.js & Tailwind CSS
+            &copy; {currentYear} Haris Awan • Made with{" "}
+            <i className="fas fa-heart text-red-500 animate-pulse text-[10px] sm:text-xs" />
           </p>
         </div>
       </div>

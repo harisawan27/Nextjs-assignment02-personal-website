@@ -14,7 +14,9 @@
       "Bash(powershell -Command:*)",
       "Bash(del \"F:\\\\Nextjs-assignment02-personal-website\\\\app\\\\favicon.ico\")",
       "Bash(dir /b \"F:\\\\Nextjs-assignment02-personal-website\\\\app\")",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(dir /s /b \"F:\\\\Nextjs-assignment02-personal-website\\\\*footer*\")",
+      "Bash(dir /s /b \"F:\\\\Nextjs-assignment02-personal-website\\\\src\\\\components\")"
     ]
   }
 }
