@@ -49,7 +49,7 @@ const projects = [
     description:
       "RehnumaAI is a web app built with Next.js, TypeScript, Gemini, and Firebase. It gives students a friendly chat space where they can ask study questions, upload documents or images, and get answers instantly with streaming replies.",
     image: "/images/rehnuma_ai.png",
-    link: "https://rehnumaai-7f4c1.web.app/",
+    link: "https://rehnuma-ai.vercel.app/",
     category: "web-app",
     tags: ["Next.js", "Agentic AI", "Firebase"],
     featured: true,
