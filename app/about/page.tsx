@@ -59,10 +59,10 @@ const timeline = [
     icon: "fas fa-brain",
   },
   {
-    year: "Continuing",
+    year: "Ongoing",
     title: "Humanities",
     description:
-      "Pursuing Intermediate in Humanities at Govt. Degree Boys College Baldia Town, building a strong foundation in arts and social sciences.",
+      "Currently pursuing my Intermediate in Humanities as a private candidate through the Board of Intermediate Education, Karachi (BIEK), building a diverse foundation in social sciences while specializing in AI engineering.",
     type: "education",
     icon: "fas fa-graduation-cap",
   },
