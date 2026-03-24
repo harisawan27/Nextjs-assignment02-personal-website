@@ -31,6 +31,26 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: 1,
+    title: "Data Analytics And Business Intelligence Certificate",
+    issuer: "DigiSkills Training Program",
+    date: "March 2026",
+    category: "Data Analytics",
+    file: "/my-certificates/DSTP Data Analytics And Buiseness Intelligence Certificate.pdf",
+    type: "pdf",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: 2,
+    title: "Startup Strategies And Entrepreneurship Certificate",
+    issuer: "DigiSkills Training Program",
+    date: "March 2026",
+    category: "Entrepreneurship",
+    file: "/my-certificates/DSTP Startup Strategies And Entrepreneurship Certificate.pdf",
+    type: "pdf",
+    color: "from-violet-500 to-indigo-500",
+  },
+  {
+    id: 3,
     title: "5-Day AI Agents Intensive Course",
     issuer: "Google",
     date: "December 2025",
@@ -40,7 +60,7 @@ const certificates: Certificate[] = [
     color: "from-blue-500 to-cyan-500",
   },
   {
-    id: 2,
+    id: 4,
     title: "Letter of Recommendation",
     issuer: "Code Alpha",
     date: "September 2024",
@@ -50,7 +70,7 @@ const certificates: Certificate[] = [
     color: "from-indigo-500 to-purple-500",
   },
   {
-    id: 3,
+    id: 5,
     title: "Frontend Development Internship",
     issuer: "Code Alpha",
     date: "July 2024",
@@ -60,7 +80,7 @@ const certificates: Certificate[] = [
     color: "from-amber-500 to-orange-500",
   },
   {
-    id: 4,
+    id: 6,
     title: "TypeScript Operators Certificate",
     issuer: "Coursera",
     date: "May 2024",
@@ -70,7 +90,7 @@ const certificates: Certificate[] = [
     color: "from-blue-600 to-indigo-600",
   },
   {
-    id: 5,
+    id: 7,
     title: "AutoCAD Certificate",
     issuer: "DigiSkills Training Program",
     date: "May 2022",
@@ -80,7 +100,7 @@ const certificates: Certificate[] = [
     color: "from-red-500 to-orange-500",
   },
   {
-    id: 6,
+    id: 8,
     title: "Digital Marketing Certificate",
     issuer: "DigiSkills Training Program",
     date: "May 2022",
@@ -90,7 +110,7 @@ const certificates: Certificate[] = [
     color: "from-green-500 to-emerald-500",
   },
   {
-    id: 7,
+    id: 9,
     title: "Freelancing Certificate",
     issuer: "DigiSkills Training Program",
     date: "August 2020",
@@ -100,7 +120,7 @@ const certificates: Certificate[] = [
     color: "from-purple-500 to-pink-500",
   },
   {
-    id: 8,
+    id: 10,
     title: "Graphic Design Certificate",
     issuer: "DigiSkills Training Program",
     date: "August 2020",
