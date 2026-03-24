@@ -176,15 +176,15 @@ export default function Certifications() {
               <div className="text-xs sm:text-sm text-gray-400">Certifications</div>
             </div>
             <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">5+</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">{new Set(certificates.map((c) => c.category)).size}</div>
               <div className="text-xs sm:text-sm text-gray-400">Skill Areas</div>
             </div>
             <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">4+</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">{new Set(certificates.map((c) => c.issuer)).size}</div>
               <div className="text-xs sm:text-sm text-gray-400">Issuers</div>
             </div>
             <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-              <div className="text-xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">2023-24</div>
+              <div className="text-xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">2020-26</div>
               <div className="text-xs sm:text-sm text-gray-400">Years Active</div>
             </div>
           </div>
