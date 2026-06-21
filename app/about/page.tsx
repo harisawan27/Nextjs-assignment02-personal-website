@@ -135,9 +135,9 @@ const socialLinks = [
   },
   {
     icon: "fab fa-x-twitter",
-    href: "https://x.com/harisawan27",
+    href: "https://x.com/haris_awan07",
     label: "X (Twitter)",
-    username: "@harisawan27",
+    username: "@haris_awan07",
     color: "hover:border-white",
   },
 ];
@@ -169,7 +169,7 @@ export default function About() {
           </div>
 
           {/* Profile Section */}
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
             {/* Image */}
             <div className="relative">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden">
@@ -198,21 +198,38 @@ export default function About() {
               <p className="text-indigo-400 font-medium mb-6">
                 Full-Stack Developer & Agentic AI Engineer
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                I&apos;m a passionate developer and designer who blends creativity
-                with technology to craft meaningful digital experiences. With a
-                strong foundation in full-stack web development and UI/UX design,
-                I build modern, responsive, and visually engaging websites and
-                applications.
-              </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Currently, I&apos;m advancing my skills through the GIAIC program,
-                where I&apos;m learning Cloud Native Development. Having completed
-                Agentic AI and Spec-Driven Development, I&apos;ve developed intelligent
-                agents using the OpenAI SDK in Python, gaining hands-on experience
-                in building systems that can reason, plan, and act autonomously.
-                This future-ready training helps me create scalable and intelligent
-                digital solutions.
+                <p className="text-gray-400 text-lg leading-relaxed mb-6 text-left">
+                  I am a Full Stack Developer and Agentic AI Engineer based in Karachi. I
+                  specialize in <span className="font-bold">Spec-Driven Development (SDD)</span> and <span className="font-bold">Cloud Native Development</span>, utilizing an AI-assisted architecture to design,
+                  audit, and deploy production-level systems with high precision.
+                </p>
+
+              <div className="text-gray-400 mb-6">
+                  <p className="mb-4 text-left">
+                    Currently, I am advancing my skills at the <span className="font-bold">Governor Initiative of Artificial Intelligence Course (GIAIC)</span>, where I focus on building autonomous agents and cloud-native
+                    applications. I also lead web development initiatives at the Pakistan-specific branch of
+                    <span className="font-bold"> WEBXES LLC</span>, delivering high-performance, SEO-optimized digital solutions for diverse client needs.
+                  </p>
+              </div>
+
+              <h3 className="text-lg font-semibold text-white mb-3">Technical Expertise</h3>
+              <ul className="text-gray-400 text-left list-disc list-inside mb-6 space-y-2">
+                <li><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript.</li>
+                <li><strong>Backend:</strong> Node.js, Python, FastAPI, SQLModel.</li>
+                <li><strong>AI &amp; Agentic Systems:</strong> OpenAI Agent SDK, OpenAI AgentKit, Claude Code, n8n, autonomous agent design, AI logic, and automation.</li>
+                <li><strong>Databases:</strong> Sanity, Firebase, Neon PostgreSQL.</li>
+                <li><strong>Tools &amp; Platforms:</strong> Git, GitHub, Vercel, Hostinger, WordPress, Figma, Canva, VS Code.</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-white mb-3">Professional Methodologies</h3>
+              <ul className="text-gray-400 text-left list-disc list-inside mb-6 space-y-2">
+                <li><strong>Spec-Driven Development (SDD):</strong> Architecting systems through clear specifications to ensure rapid and auditable deployment.</li>
+                <li><strong>Cloud Native Development:</strong> Building and scaling resilient applications in modern cloud environments.</li>
+                <li><strong>Prompt Engineering:</strong> Optimizing LLM interactions for advanced system orchestration and automated code auditing.</li>
+              </ul>
+
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 text-left">
+                I am driven by a disciplined approach to problem-solving and an unrelenting focus on high-performance development. I am open to professional roles and collaborations where I can apply my technical expertise to build the next generation of intelligent technology.
               </p>
 
               {/* Quick Info */}
@@ -231,7 +248,7 @@ export default function About() {
                     <i className="fas fa-envelope text-indigo-400 flex-shrink-0" />
                     <div className="min-w-0">
                       <p className="text-xs text-gray-500">Email</p>
-                      <p className="text-sm font-medium truncate">111harisawan@gmail.com</p>
+                      <p className="text-sm font-medium truncate">haris@webxes.com</p>
                     </div>
                   </div>
                 </div>

@@ -8,8 +8,8 @@ const contactInfo = [
   {
     icon: "fas fa-envelope",
     label: "Email",
-    value: "111harisawan@gmail.com",
-    href: "mailto:111harisawan@gmail.com",
+    value: "haris@webxes.com",
+    href: "mailto:haris@webxes.com",
     gradient: "from-indigo-500 to-purple-500",
   },
   {
@@ -43,7 +43,7 @@ const socialLinks = [
   },
   {
     icon: "fab fa-x-twitter",
-    href: "https://x.com/harisawan27",
+    href: "https://x.com/haris_awan07",
     label: "X (Twitter)",
     color: "hover:text-white hover:border-white",
   },

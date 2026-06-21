@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     icon: "fab fa-x-twitter",
-    href: "https://x.com/harisawan27",
+    href: "https://x.com/haris_awan07",
     label: "X (Twitter)",
     hoverColor: "hover:text-white",
   },
@@ -106,7 +106,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-3 text-sm sm:text-base"
                 >
                   <i className="fas fa-envelope text-indigo-500 flex-shrink-0" />
-                  <span className="truncate">111harisawan@gmail.com</span>
+                  <span className="truncate">haris@webxes.com</span>
                 </a>
               </li>
               <li>

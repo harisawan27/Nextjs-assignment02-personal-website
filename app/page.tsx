@@ -429,12 +429,12 @@ export default function Home() {
                   </span>
                 </Link>
                 <a
-                  href="mailto:111harisawan@gmail.com"
+                  href="mailto:haris@webxes.com"
                   className="btn-secondary w-full sm:w-auto"
                 >
                   <span className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base">
                     <i className="fas fa-envelope" />
-                    <span className="truncate">111harisawan@gmail.com</span>
+                    <span className="truncate">haris@webxes.com</span>
                   </span>
                 </a>
               </div>
