@@ -237,7 +237,7 @@ export default function About() {
                     <i className="fas fa-envelope text-indigo-400 flex-shrink-0" />
                     <div className="min-w-0">
                       <p className="text-xs text-gray-500">Email</p>
-                      <p className="text-sm font-medium truncate">haris@webxes.com</p>
+                      <a href="mailto:haris@webxes.com" className="text-sm font-medium truncate hover:text-indigo-400 transition-colors">haris@webxes.com</a>
                     </div>
                   </div>
                 </div>

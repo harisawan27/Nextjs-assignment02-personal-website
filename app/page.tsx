@@ -50,28 +50,28 @@ const services = [
 
 const featuredProjects = [
   {
+    title: "Morph OS - Generative AI Workspace",
+    description:
+      "A generative operating system that turns natural language into interactive software in seconds.",
+    image: "/images/morph_os.png",
+    link: "https://morph-os-haris.vercel.app/",
+    tags: ["Agentic AI", "FastAPI", "React", "Next.js"],
+  },
+  {
+    title: "Boardroom AI - Executive Decision Engine",
+    description:
+      "A multi-agent decision engine that simulates a virtual board meeting with specialized AI agents.",
+    image: "/images/boardroom_ai.png",
+    link: "https://boardroom-ai-duologic.vercel.app/",
+    tags: ["Google ADK", "Agentic AI", "FastAPI"],
+  },
+  {
     title: "WEBXES LLC",
     description:
       "A modern web design & development partner that builds scalable websites, ecommerce platforms, and apps.",
     image: "/images/webxes.png",
     link: "https://www.webxes.com/",
     tags: ["Next.js", "React", "Tailwind"],
-  },
-  {
-    title: "DoneKaro - AI Powered Todo App",
-    description:
-      "An AI powered full-stack task management app with DoneKaro AI chatbot assistant. Available as web and Android app.",
-    image: "/images/donekaro.png",
-    link: "https://q4-todo-hackathon.vercel.app/",
-    tags: ["Next.js", "FastAPI", "PostgreSQL"],
-  },
-  {
-    title: "RehnumaAI - Smart Study Guide",
-    description:
-      "A web app where students can ask study questions, upload documents or images, and get instant AI-powered answers.",
-    image: "/images/rehnuma_ai.png",
-    link: "https://rehnumaai-7f4c1.web.app/",
-    tags: ["Next.js", "Gemini AI", "Firebase"],
   },
 ];
 
@@ -151,7 +151,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors shadow-lg shadow-[#1dbf73]/20"
                 >
-                  <i className="fas fa-handshake" />
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.062 18.062V9.664H24V5.703h-4.832v3.96h1.94v8.399h-3.879V5.703h-3.878v12.36h8.71zm-9.682-8.398v8.398h3.878v-8.398h-3.878zm-3.882-3.96v3.96h1.94v8.398h-3.878V9.664h1.938v-3.96h-4.832v12.359H7.5V11.2h3.883v6.862h3.878V5.704H8.498zM2.898 0c-1.6 0-2.898 1.298-2.898 2.898v3.961h3.878V2.898H8.497v2.805H12.38V0H2.898z"/></svg>
                   Hire me on Fiverr
                 </a>
               </div>
@@ -229,17 +229,10 @@ export default function Home() {
                 <span className="gradient-text">Technology</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                I&apos;m Muhammad Haris Awan, a passionate developer and designer who
-                blends creativity with technology to craft meaningful digital
-                experiences. With a strong foundation in full-stack web development
-                and UI/UX design, I build modern, responsive, and visually engaging
-                websites and applications.
+                I am a Full-Stack AI Engineer based in Karachi. I specialize in building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures, using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Currently advancing my skills through the GIAIC program, where I&apos;m
-                learning Cloud Native Development. I&apos;ve completed Agentic AI and
-                Spec-Driven Development, building intelligent agents using the
-                OpenAI SDK in Python that can reason, plan, and act autonomously.
+                Currently, I am advancing my skills at the Governor Initiative of Artificial Intelligence Course (GIAIC), focusing on building autonomous agents. I also spearhead the architecture and deployment of multi-agent generative workspaces and intelligent decision engines at WEBXES LLC.
               </p>
 
               {/* Highlights */}
