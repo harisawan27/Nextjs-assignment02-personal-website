@@ -15,6 +15,27 @@ const categories = [
 
 const projects = [
   {
+    title: "Morph OS - Generative AI Workspace",
+    description:
+      "A generative operating system that turns natural language into interactive software in seconds. Features a 6-agent pipeline to generate, edit, and self-correct React apps live in your browser.",
+    image: "/images/morph_os.png",
+    link: "https://morph-os-haris.vercel.app/",
+    demoLink: "https://youtu.be/rCgnH5MLSpk?si=a0-3OeZQIPoM9rlL",
+    category: "web-app",
+    tags: ["Agentic AI", "FastAPI", "React", "Next.js"],
+    featured: true,
+  },
+  {
+    title: "Boardroom AI - Executive Decision Engine",
+    description:
+      "A multi-agent decision engine that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured executive reports.",
+    image: "/images/boardroom_ai.png",
+    link: "https://boardroom-ai-duologic.vercel.app/",
+    category: "web-app",
+    tags: ["Google ADK", "Agentic AI", "FastAPI", "React"],
+    featured: true,
+  },
+  {
     title: "WEBXES LLC - High-Performance US-Based Agency",
     description:
       "WEBXES is a modern web design & development partner that build scalable websites, ecommerce platforms, and apps.",
@@ -30,6 +51,7 @@ const projects = [
       "An AI powered full-stack task management application designed for individual productivity. Powered with DoneKaro AI chatbot that serves as your AI Assistant. Available as both a web app and Android app built with Capacitor.",
     image: "/images/donekaro.png",
     link: "https://q4-todo-hackathon.vercel.app/",
+    demoLink: "https://youtu.be/9hVFsnVX6pM?si=KGwXyD4wMfCfBkvo",
     category: "web-app",
     tags: ["Next.js", "FastAPI", "PostgreSQL (Neon)", "Capacitor"],
     featured: true,
@@ -40,6 +62,7 @@ const projects = [
       "This project is built with Docusaurus and serves as a comprehensive guide for engineering students and professionals venturing into the world of humanoid robotics, physical AI, and robot learning. With a RAG Chatbot (Retrieval-Augmented Generation) Built with FastAPI, Google Gemini, Neon Serverless Postgres, and Qdrant Cloud, this chatbot understands the book's full context.",
     image: "/images/book.png",
     link: "https://q4-book-hackathon-1.vercel.app/",
+    demoLink: "https://youtu.be/f7M5I0qJ5A4?si=Lv-w6Kx48bHjmetN",
     category: "websites",
     tags: ["Docusaurus", "FastAPI", "Qdrant Cloud"],
     featured: true,
@@ -234,6 +257,7 @@ type Project = {
   category: string;
   tags: string[];
   featured?: boolean;
+  demoLink?: string;
 };
 
 export default function Projects() {
@@ -252,6 +276,12 @@ export default function Projects() {
     activeCategory === "all"
       ? sortedProjects
       : sortedProjects.filter((p) => p.category === activeCategory);
+
+  const totalProjects = projects.length;
+  const webAppsCount = projects.filter((p) => p.category === "web-app").length;
+  const websitesCount = projects.filter((p) => p.category === "websites").length;
+  const toolsCount = projects.filter((p) => p.category === "tools").length;
+  const gamesCount = projects.filter((p) => p.category === "games").length;
 
   return (
     <div className="relative bg-[#030014] overflow-hidden">
@@ -282,23 +312,23 @@ export default function Projects() {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mt-12 max-w-4xl mx-auto">
               <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">23+</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{totalProjects}+</div>
                 <div className="text-xs text-gray-400">Total Projects</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{webAppsCount}</div>
                 <div className="text-xs text-gray-400">Web Apps</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">4</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{websitesCount}</div>
                 <div className="text-xs text-gray-400">Websites</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">8</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{toolsCount}</div>
                 <div className="text-xs text-gray-400">Tools</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5 col-span-2 sm:col-span-1">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">1</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{gamesCount}</div>
                 <div className="text-xs text-gray-400">Games</div>
               </div>
             </div>
@@ -508,16 +538,30 @@ export default function Projects() {
                 {selectedProject.description}
               </p>
 
-              {/* Action Button */}
-              <a
-                href={selectedProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity text-sm sm:text-base"
-              >
-                Visit Project
-                <i className="fas fa-external-link-alt" />
-              </a>
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity text-sm sm:text-base"
+                >
+                  Visit Project
+                  <i className="fas fa-external-link-alt" />
+                </a>
+                
+                {selectedProject.demoLink && (
+                  <a
+                    href={selectedProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/10 transition-colors text-sm sm:text-base"
+                  >
+                    <i className="fab fa-youtube text-red-500" />
+                    Watch Demo
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

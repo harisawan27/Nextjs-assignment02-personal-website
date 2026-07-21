@@ -133,11 +133,9 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed animate-fade-in-up stagger-2">
                 A passionate{" "}
                 <span className="text-white font-medium">
-                  Full-Stack Developer
+                  Full-Stack AI Engineer
                 </span>{" "}
-                &{" "}
-                <span className="text-white font-medium">Agentic AI Engineer</span>{" "}
-                building intelligent digital solutions
+                building multi-agent systems in production
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start animate-fade-in-up stagger-3">
@@ -147,12 +145,15 @@ export default function Home() {
                     <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
-                <Link href="/contact" className="btn-secondary">
-                  <span className="flex items-center gap-2">
-                    <i className="fas fa-envelope" />
-                    Get in Touch
-                  </span>
-                </Link>
+                <a
+                  href="https://www.fiverr.com/happy_haris"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors shadow-lg shadow-[#1dbf73]/20"
+                >
+                  <i className="fas fa-handshake" />
+                  Hire me on Fiverr
+                </a>
               </div>
 
               {/* Stats */}
@@ -275,8 +276,8 @@ export default function Home() {
                     </div>
                     <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-colors">
                       <i className="fas fa-briefcase text-3xl text-purple-500 mb-4" />
-                      <h3 className="font-semibold mb-2">Web Developer</h3>
-                      <p className="text-sm text-gray-400">WEBXES Tech 2024</p>
+                      <h3 className="font-semibold mb-2 text-sm leading-tight">Full-Stack AI Engineer</h3>
+                      <p className="text-xs text-gray-400 mt-1">WEBXES LLC 2026</p>
                     </div>
                   </div>
                   <div className="space-y-4 mt-8">

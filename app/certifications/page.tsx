@@ -59,26 +59,7 @@ const certificates: Certificate[] = [
     type: "image",
     color: "from-blue-500 to-cyan-500",
   },
-  {
-    id: 4,
-    title: "Letter of Recommendation",
-    issuer: "Code Alpha",
-    date: "September 2024",
-    category: "Web Development",
-    file: "/my-certificates/Muhammad Haris Awan (1).pdf",
-    type: "pdf",
-    color: "from-indigo-500 to-purple-500",
-  },
-  {
-    id: 5,
-    title: "Frontend Development Internship",
-    issuer: "Code Alpha",
-    date: "July 2024",
-    category: "Frontend Developement",
-    file: "/my-certificates/Muhammad Haris Awan.pdf",
-    type: "pdf",
-    color: "from-amber-500 to-orange-500",
-  },
+
   {
     id: 6,
     title: "TypeScript Operators Certificate",

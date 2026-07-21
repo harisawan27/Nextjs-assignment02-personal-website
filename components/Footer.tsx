@@ -31,6 +31,12 @@ const socialLinks = [
     label: "Facebook",
     hoverColor: "hover:text-blue-600",
   },
+  {
+    icon: "fas fa-handshake",
+    href: "https://www.fiverr.com/happy_haris",
+    label: "Fiverr",
+    hoverColor: "hover:text-[#1dbf73]",
+  },
 ];
 
 const footerLinks = [
@@ -59,7 +65,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Full-Stack Developer & Agentic AI Engineer building intelligent,
+              Full-Stack AI Engineer building intelligent multi-agent systems in production.
               scalable digital solutions. Let&apos;s create something amazing together.
             </p>
             <div className="flex items-center gap-4">

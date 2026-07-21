@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Haris Awan - Full Stack Developer & Agentic AI Engineer";
+export const alt = "Haris Awan - Full-Stack AI Engineer";
 export const size = {
   width: 1200,
   height: 630,
@@ -138,11 +138,8 @@ export default async function Image() {
                 lineHeight: 1.4,
               }}
             >
-              A passionate{" "}
-              <span style={{ color: "white", fontWeight: "500" }}>Full-Stack Developer</span>
-              {" & "}
-              <span style={{ color: "white", fontWeight: "500" }}>Agentic AI Engineer</span>
-              {" "}building intelligent digital solutions
+              <span style={{ color: "white", fontWeight: "500" }}>Full-Stack AI Engineer</span>
+              {" "}building multi-agent systems in production
             </div>
 
             {/* Stats */}

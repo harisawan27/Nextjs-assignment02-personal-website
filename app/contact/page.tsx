@@ -59,6 +59,12 @@ const socialLinks = [
     label: "Instagram",
     color: "hover:text-pink-500 hover:border-pink-500",
   },
+  {
+    icon: "fas fa-handshake",
+    href: "https://www.fiverr.com/happy_haris",
+    label: "Fiverr",
+    color: "hover:text-[#1dbf73] hover:border-[#1dbf73]",
+  },
 ];
 
 export default function Contact() {
@@ -329,10 +335,19 @@ export default function Contact() {
                   <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
                   <span className="font-medium">Available for freelance</span>
                 </div>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-sm mb-6">
                   I&apos;m currently accepting web development and AI projects.
                   Let&apos;s discuss how I can help bring your intelligent solutions to life.
                 </p>
+                <a
+                  href="https://www.fiverr.com/happy_haris"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors w-full sm:w-auto justify-center shadow-lg shadow-[#1dbf73]/20"
+                >
+                  <i className="fas fa-handshake" />
+                  Hire me on Fiverr
+                </a>
               </div>
             </div>
           </div>

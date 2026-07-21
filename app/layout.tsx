@@ -21,27 +21,27 @@ export const metadata: Metadata = {
 
   // Title with template for child pages
   title: {
-    default: "Haris Awan | Full Stack Developer & Agentic AI Engineer",
+    default: "Haris Awan | Full-Stack AI Engineer",
     template: "%s | Haris Awan",
   },
 
   // SEO-optimized description (158 chars)
   description:
-    "Full Stack Developer & Agentic AI Engineer specializing in Next.js, Python & AI solutions. Building intelligent, scalable web applications. Hire me today!",
+    "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
 
   // High-value keywords
   keywords: [
-    "Full Stack Developer",
+    "Full-Stack AI Engineer",
     "Agentic AI Engineer",
     "AI Solutions",
-    "Web Development Expert",
+    "Multi-agent Systems",
     "Next.js Developer",
     "Python Developer",
-    "React Developer",
-    "OpenAI Integration",
+    "FastAPI",
+    "OpenAI SDK",
     "Haris Awan",
-    "Hire Developer Pakistan",
-    "Freelance AI Developer",
+    "Google ADK",
+    "Freelance AI Engineer",
   ],
 
   // Author info
@@ -73,15 +73,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://harisawan.vercel.app",
     siteName: "Haris Awan Portfolio",
-    title: "Haris Awan | Full Stack Developer & Agentic AI Engineer",
+    title: "Haris Awan | Full-Stack AI Engineer",
     description:
-      "Building intelligent web solutions with Next.js, Python & AI. Let's create something amazing together!",
+      "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Haris Awan - Full Stack Developer & Agentic AI Engineer",
+        alt: "Haris Awan - Full-Stack AI Engineer",
       },
     ],
   },
@@ -89,9 +89,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Haris Awan | Full Stack Developer & Agentic AI Engineer",
+    title: "Haris Awan | Full-Stack AI Engineer",
     description:
-      "Building intelligent web solutions with Next.js, Python & AI. Let's create something amazing together!",
+      "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
     images: ["/twitter-image"],
     creator: "@harisawan27",
   },
@@ -118,9 +118,9 @@ export default function RootLayout({
               alternateName: "Haris Awan",
               url: "https://harisawan.vercel.app",
               image: "https://harisawan.vercel.app/opengraph-image",
-              jobTitle: ["Full Stack Developer", "Agentic AI Engineer"],
+              jobTitle: ["Full-Stack AI Engineer"],
               description:
-                "Full Stack Developer & Agentic AI Engineer specializing in Next.js, Python, and AI solutions.",
+                "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
               sameAs: [
                 "https://github.com/harisawan27",
                 "https://www.linkedin.com/in/m-haris-awan/",
@@ -140,7 +140,7 @@ export default function RootLayout({
               ],
               worksFor: {
                 "@type": "Organization",
-                name: "WEBXES Tech",
+                name: "WEBXES LLC",
               },
             }),
           }}

@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Muhammad Haris Awan - Full Stack Developer & Agentic AI Engineer specializing in Next.js, Python, and AI solutions.",
+    "Learn about Muhammad Haris Awan - Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
 };
 
 const techStack = [
@@ -35,20 +35,12 @@ const techStack = [
 
 const timeline = [
   {
-    year: "2024 - Present",
-    title: "Full-Stack Developer & AI Engineer",
+    year: "2026 - Present",
+    title: "Full-Stack AI Engineer at WEBXES LLC",
     description:
-      "Building intelligent web applications and AI agents using Next.js, Python, and OpenAI SDK. Developing scalable solutions that combine modern web technologies with AI capabilities.",
+      "Architecting and deploying AI-driven full-stack web applications using Next.js, Python, and OpenAI SDK. Designing autonomous agents to automate workflows and delivering scalable, AI-enhanced solutions for clients.",
     type: "work",
     icon: "fas fa-rocket",
-  },
-  {
-    year: "2024",
-    title: "Web Developer at WEBXES Tech",
-    description:
-      "Built modern web applications and contributed to client projects using React, Next.js, and various frontend technologies. Gained hands-on experience in production environments.",
-    type: "work",
-    icon: "fas fa-briefcase",
   },
   {
     year: "2024 - Present",
@@ -59,10 +51,10 @@ const timeline = [
     icon: "fas fa-brain",
   },
   {
-    year: "Ongoing",
-    title: "Humanities",
+    year: "2026",
+    title: "Intermediate in Humanities",
     description:
-      "Currently pursuing my Intermediate in Humanities as a private candidate through the Board of Intermediate Education, Karachi (BIEK), building a diverse foundation in social sciences while specializing in AI engineering.",
+      "Completed Intermediate in Humanities as a private candidate through the Board of Intermediate Education, Karachi (BIEK), building a strong foundation in social sciences alongside my technical expertise.",
     type: "education",
     icon: "fas fa-graduation-cap",
   },
@@ -164,7 +156,7 @@ export default function About() {
               About <span className="gradient-text">Me</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Full-Stack Developer & Agentic AI Engineer building intelligent digital solutions
+              Full-Stack AI Engineer building multi-agent systems in production
             </p>
           </div>
 
@@ -196,19 +188,16 @@ export default function About() {
                 Muhammad Haris Awan
               </h2>
               <p className="text-indigo-400 font-medium mb-6">
-                Full-Stack Developer & Agentic AI Engineer
+                Full-Stack AI Engineer
               </p>
                 <p className="text-gray-400 text-lg leading-relaxed mb-6 text-left">
-                  I am a Full Stack Developer and Agentic AI Engineer based in Karachi. I
-                  specialize in <span className="font-bold">Spec-Driven Development (SDD)</span> and <span className="font-bold">Cloud Native Development</span>, utilizing an AI-assisted architecture to design,
-                  audit, and deploy production-level systems with high precision.
+                  I am a Full-Stack AI Engineer based in Karachi. I specialize in building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures, using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK.
                 </p>
 
               <div className="text-gray-400 mb-6">
                   <p className="mb-4 text-left">
-                    Currently, I am advancing my skills at the <span className="font-bold">Governor Initiative of Artificial Intelligence Course (GIAIC)</span>, where I focus on building autonomous agents and cloud-native
-                    applications. I also lead web development initiatives at the Pakistan-specific branch of
-                    <span className="font-bold"> WEBXES LLC</span>, delivering high-performance, SEO-optimized digital solutions for diverse client needs.
+                    Currently, I am advancing my skills at the <span className="font-bold">Governor Initiative of Artificial Intelligence Course (GIAIC)</span>, focusing on building autonomous agents. I also spearhead the architecture and deployment of multi-agent generative workspaces and intelligent decision engines at
+                    <span className="font-bold"> WEBXES LLC</span>.
                   </p>
               </div>
 
