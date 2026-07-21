@@ -1,0 +1,71 @@
+# Muhammad Haris Awan — llms.txt
+
+> Full-Stack AI Engineer | Agentic AI Engineer | Freelancer on Fiverr
+
+## Identity
+
+- **Full Name:** Muhammad Haris Awan
+- **Also Known As:** Haris Awan, M. Haris Awan, happy_haris (Fiverr)
+- **Title:** Full-Stack AI Engineer & Agentic AI Engineer
+- **Location:** Karachi, Pakistan
+- **Company:** WEBXES LLC (Full-Stack AI Engineer, 2026–Present)
+
+## Professional Summary
+
+Muhammad Haris Awan is a Full-Stack AI Engineer based in Karachi, Pakistan. He specializes in building multi-agent systems in production—from intent routing and self-correcting agent loops to real-time streaming architectures—using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK. He is currently advancing his skills at the Governor Initiative for Artificial Intelligence Course (GIAIC) and spearheads the architecture and deployment of AI-driven web applications at WEBXES LLC.
+
+## Technical Skills
+
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript
+- **Backend:** Node.js, Python, FastAPI, SQLModel
+- **AI & Agentic Systems:** OpenAI Agent SDK, Google ADK, Claude Code, n8n, autonomous agent design
+- **Databases:** Sanity, Firebase, Neon PostgreSQL, Qdrant Cloud
+- **Tools & Platforms:** Git, GitHub, Vercel, Docker, Hostinger, WordPress, Figma, VS Code
+
+## Key Projects
+
+### Morph OS — Generative AI Workspace
+A generative operating system that turns natural language into interactive software in seconds. Features a 6-agent pipeline to generate, edit, and self-correct React apps live in the browser.
+- **URL:** https://morph-os-haris.vercel.app/
+- **Tech:** Agentic AI, FastAPI, React, Next.js
+
+### Boardroom AI — Executive Decision Engine
+A multi-agent decision engine that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured executive reports.
+- **URL:** https://boardroom-ai-duologic.vercel.app/
+- **Tech:** Google ADK, Agentic AI, FastAPI, React
+
+### WEBXES LLC — US-Based Web Agency
+A modern web design & development partner that builds scalable websites, ecommerce platforms, and apps.
+- **URL:** https://www.webxes.com/
+- **Tech:** Next.js, React, Tailwind CSS
+
+### DoneKaro — AI Powered Todo App
+An AI-powered full-stack task management app with an integrated AI chatbot assistant. Available as both a web app and an Android app built with Capacitor.
+- **URL:** https://q4-todo-hackathon.vercel.app/
+- **Tech:** Next.js, FastAPI, PostgreSQL, Capacitor
+
+### Physical AI & Humanoid Robotics — Capstone Book
+A comprehensive guide for engineering students and professionals in humanoid robotics, physical AI, and robot learning, built with Docusaurus and featuring a RAG Chatbot.
+- **URL:** https://q4-book-hackathon-1.vercel.app/
+- **Tech:** Docusaurus, FastAPI, Qdrant Cloud
+
+## Education
+
+- **GIAIC — Agentic AI Program** (2024–Present): Advancing skills in Agentic AI, building intelligent agents using OpenAI SDK in Python.
+- **Intermediate in Humanities** (Completed 2026): Board of Intermediate Education, Karachi (BIEK).
+
+## Links
+
+- **Portfolio:** https://harisawan.vercel.app
+- **GitHub:** https://github.com/harisawan27
+- **LinkedIn:** https://www.linkedin.com/in/m-haris-awan/
+- **Fiverr:** https://www.fiverr.com/happy_haris
+- **X (Twitter):** https://x.com/haris_awan07
+- **Instagram:** https://instagram.com/haris.awan07
+- **Facebook:** https://www.facebook.com/profile.php?id=61558545486623
+- **Email:** haris@webxes.com
+- **WhatsApp:** +92 336 1232724
+
+## Availability
+
+Muhammad Haris Awan is currently available for freelance projects, remote full-time roles, and collaborations in AI-powered web development and agentic AI engineering. You can hire him directly on Fiverr at https://www.fiverr.com/happy_haris or contact him via email at haris@webxes.com.

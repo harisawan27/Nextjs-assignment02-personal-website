@@ -40,8 +40,19 @@ export const metadata: Metadata = {
     "FastAPI",
     "OpenAI SDK",
     "Haris Awan",
+    "Muhammad Haris Awan",
+    "M Haris Awan",
+    "Haris Awan portfolio",
+    "Haris Awan developer",
+    "Haris Awan AI engineer",
+    "Haris Awan Fiverr",
+    "Haris Awan Karachi",
+    "Haris Awan WEBXES",
     "Google ADK",
     "Freelance AI Engineer",
+    "WEBXES LLC",
+    "Morph OS",
+    "Boardroom AI",
   ],
 
   // Author info
@@ -93,7 +104,7 @@ export const metadata: Metadata = {
     description:
       "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
     images: ["/twitter-image"],
-    creator: "@harisawan27",
+    creator: "@haris_awan07",
   },
 
   // Additional meta
@@ -124,9 +135,10 @@ export default function RootLayout({
               sameAs: [
                 "https://github.com/harisawan27",
                 "https://www.linkedin.com/in/m-haris-awan/",
-                "https://x.com/harisawan27",
+                "https://x.com/haris_awan07",
                 "https://www.facebook.com/profile.php?id=61558545486623",
                 "https://instagram.com/haris.awan07",
+                "https://www.fiverr.com/happy_haris",
               ],
               knowsAbout: [
                 "Full Stack Development",

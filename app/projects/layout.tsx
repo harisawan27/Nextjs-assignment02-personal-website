@@ -3,7 +3,16 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore the portfolio of Muhammad Haris Awan - web apps, tools, and AI-powered projects built with Next.js, React, and Python.",
+    "Explore Muhammad Haris Awan's portfolio of 25+ projects including Morph OS, Boardroom AI, WEBXES LLC, and more — built with Next.js, FastAPI, Agentic AI, and OpenAI SDK.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: "Projects | Haris Awan — Full-Stack AI Engineer",
+    description:
+      "Explore Haris Awan's portfolio of AI-powered web apps, multi-agent systems, and full-stack projects built with Next.js, Python, and OpenAI.",
+    url: "https://harisawan.vercel.app/projects",
+  },
 };
 
 export default function ProjectsLayout({

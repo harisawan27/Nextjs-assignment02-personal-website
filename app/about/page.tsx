@@ -7,7 +7,16 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Muhammad Haris Awan - Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
+    "Learn about Muhammad Haris Awan — Full-Stack AI Engineer at WEBXES LLC, building multi-agent systems, agentic AI solutions, and scalable web apps with Next.js, FastAPI, and OpenAI SDK.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Haris Awan | Full-Stack AI Engineer",
+    description:
+      "Learn about Muhammad Haris Awan — Full-Stack AI Engineer at WEBXES LLC, building multi-agent systems, agentic AI solutions, and scalable web apps.",
+    url: "https://harisawan.vercel.app/about",
+  },
 };
 
 const techStack = [
