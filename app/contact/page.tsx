@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FiverrIcon from "@/components/FiverrIcon";
 
 const contactInfo = [
   {
@@ -324,7 +325,7 @@ export default function Contact() {
                       className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-lg sm:text-xl transition-all duration-300 hover:-translate-y-1 ${social.color}`}
                     >
                       {social.icon === "fiverr" ? (
-                        <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.062 18.062V9.664H24V5.703h-4.832v3.96h1.94v8.399h-3.879V5.703h-3.878v12.36h8.71zm-9.682-8.398v8.398h3.878v-8.398h-3.878zm-3.882-3.96v3.96h1.94v8.398h-3.878V9.664h1.938v-3.96h-4.832v12.359H7.5V11.2h3.883v6.862h3.878V5.704H8.498zM2.898 0c-1.6 0-2.898 1.298-2.898 2.898v3.961h3.878V2.898H8.497v2.805H12.38V0H2.898z"/></svg>
+                        <FiverrIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                       ) : (
                         <i className={social.icon} />
                       )}
@@ -349,7 +350,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors w-full sm:w-auto justify-center shadow-lg shadow-[#1dbf73]/20"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.062 18.062V9.664H24V5.703h-4.832v3.96h1.94v8.399h-3.879V5.703h-3.878v12.36h8.71zm-9.682-8.398v8.398h3.878v-8.398h-3.878zm-3.882-3.96v3.96h1.94v8.398h-3.878V9.664h1.938v-3.96h-4.832v12.359H7.5V11.2h3.883v6.862h3.878V5.704H8.498zM2.898 0c-1.6 0-2.898 1.298-2.898 2.898v3.961h3.878V2.898H8.497v2.805H12.38V0H2.898z"/></svg>
+                  <FiverrIcon className="w-5 h-5" />
                   Hire me on Fiverr
                 </a>
               </div>

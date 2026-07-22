@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FiverrIcon from "@/components/FiverrIcon";
 
 const socialLinks = [
   {
@@ -79,7 +80,7 @@ export default function Footer() {
                   className={`w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 ${social.hoverColor}`}
                 >
                   {social.icon === "fiverr" ? (
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.062 18.062V9.664H24V5.703h-4.832v3.96h1.94v8.399h-3.879V5.703h-3.878v12.36h8.71zm-9.682-8.398v8.398h3.878v-8.398h-3.878zm-3.882-3.96v3.96h1.94v8.398h-3.878V9.664h1.938v-3.96h-4.832v12.359H7.5V11.2h3.883v6.862h3.878V5.704H8.498zM2.898 0c-1.6 0-2.898 1.298-2.898 2.898v3.961h3.878V2.898H8.497v2.805H12.38V0H2.898z"/></svg>
+                    <FiverrIcon className="w-5 h-5" />
                   ) : (
                     <i className={social.icon} />
                   )}
