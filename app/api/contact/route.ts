@@ -1,15 +1,6 @@
 import nodemailer from 'nodemailer';
 import { NextRequest, NextResponse } from 'next/server';
 
-// Create reusable transporter using Gmail SMTP
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
-
 export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json();
@@ -22,10 +13,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send email using Nodemailer
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+
+    if (!gmailUser || !gmailAppPassword) {
+      console.error('Email error: missing Gmail configuration');
+      return NextResponse.json(
+        {
+          error:
+            'Email service is not configured. Set GMAIL_USER and GMAIL_APP_PASSWORD in your environment.',
+        },
+        { status: 500 }
+      );
+    }
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: gmailUser,
+        pass: gmailAppPassword,
+      },
+    });
+
     const mailOptions = {
-      from: `Portfolio Contact <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER, // Send to yourself
+      from: `Portfolio Contact <${gmailUser}>`,
+      to: gmailUser,
       replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
