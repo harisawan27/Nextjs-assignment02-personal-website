@@ -36,7 +36,7 @@ export default function PdfThumbnail({ url, alt, className = "" }: PdfThumbnailP
   if (!mounted) {
     return (
       <div className={`flex items-center justify-center bg-gray-800/50 ${className}`}>
-        <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -56,7 +56,7 @@ export default function PdfThumbnail({ url, alt, className = "" }: PdfThumbnailP
     <div className={`relative overflow-hidden bg-white ${className}`}>
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-          <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />
         </div>
       )}
       <Document

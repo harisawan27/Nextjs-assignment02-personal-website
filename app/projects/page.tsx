@@ -284,7 +284,7 @@ export default function Projects() {
   const gamesCount = projects.filter((p) => p.category === "games").length;
 
   return (
-    <div className="relative bg-[#030014] overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Background elements */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
@@ -298,7 +298,7 @@ export default function Projects() {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <i className="fas fa-folder-open text-indigo-400" />
+              <i className="fas fa-folder-open text-cyan-400" />
               <span className="text-sm text-gray-300">Portfolio</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -342,7 +342,7 @@ export default function Projects() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
                   activeCategory === category.id
-                    ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg shadow-indigo-500/25"
+                    ? "bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-lg shadow-cyan-500/25"
                     : "bg-white/5 text-gray-400 border border-white/10 hover:bg-white/10 hover:text-white"
                 }`}
               >
@@ -382,9 +382,6 @@ export default function Projects() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-[#030014]/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-
                     {/* Hover overlay with icon */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
@@ -394,13 +391,13 @@ export default function Projects() {
                   </div>
 
                   {/* Content */}
-                  <div className="relative p-6 bg-gradient-to-t from-[#0a0a1f] to-[#030014]/80 border border-white/5 border-t-0 rounded-b-2xl">
+                  <div className="relative p-6 bg-[var(--surface)] border border-[var(--surface-border)] border-t-0 rounded-b-2xl transition-colors duration-300">
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                          className="px-3 py-1 text-xs font-medium rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                         >
                           {tag}
                         </span>
@@ -408,17 +405,17 @@ export default function Projects() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-indigo-400 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold mb-3 text-[var(--foreground)] group-hover:text-cyan-400 transition-colors duration-300">
                       {project.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                    <p className="text-[var(--foreground-secondary)] text-sm leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
 
                     {/* View link */}
-                    <div className="flex items-center gap-2 mt-4 text-sm text-indigo-400 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <div className="flex items-center gap-2 mt-4 text-sm text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                       View Details
                       <i className="fas fa-arrow-right text-xs" />
                     </div>
@@ -426,7 +423,7 @@ export default function Projects() {
 
                   {/* Glow effect on hover */}
                   <div
-                    className={`absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10`}
+                    className={`absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10`}
                   />
                 </div>
               </div>
@@ -449,8 +446,8 @@ export default function Projects() {
       <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="relative p-6 sm:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
-            <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-cyan-500/20" />
+            <div className="absolute inset-0 bg-[var(--surface)]/70 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
 
             <div className="relative">
@@ -463,7 +460,7 @@ export default function Projects() {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-teal-500 hover:opacity-90 transition-opacity"
               >
                 Start a Conversation
                 <i className="fas fa-arrow-right" />
@@ -471,8 +468,8 @@ export default function Projects() {
             </div>
 
             {/* Decorative */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-500/30 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-500/30 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-teal-500/30 rounded-full blur-3xl" />
           </div>
         </div>
       </section>
@@ -484,7 +481,7 @@ export default function Projects() {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="relative w-full max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl bg-[#0a0a1f] border border-white/10"
+            className="relative w-full max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl bg-[var(--surface)] border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -521,7 +518,7 @@ export default function Projects() {
                 {selectedProject.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
-                    className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                    className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                   >
                     {tag}
                   </span>
@@ -544,7 +541,7 @@ export default function Projects() {
                   href={selectedProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity text-sm sm:text-base"
+                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-teal-500 hover:opacity-90 transition-opacity text-sm sm:text-base"
                 >
                   Visit Project
                   <i className="fas fa-external-link-alt" />

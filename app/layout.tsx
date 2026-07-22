@@ -160,7 +160,7 @@ export default function RootLayout({
       </head>
       <Analytics/>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030014] text-white min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)]`}
       >
         <div className="noise-overlay" />
         {children}

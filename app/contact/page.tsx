@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FiverrIcon from "@/components/FiverrIcon";
+import { TbBrandFiverr } from "react-icons/tb";
 
 const contactInfo = [
   {
@@ -11,7 +11,7 @@ const contactInfo = [
     label: "Email",
     value: "haris@webxes.com",
     href: "mailto:haris@webxes.com",
-    gradient: "from-indigo-500 to-purple-500",
+    gradient: "from-cyan-500 to-teal-500",
   },
   {
     icon: "fab fa-whatsapp",
@@ -58,7 +58,7 @@ const socialLinks = [
     icon: "fab fa-instagram",
     href: "https://instagram.com/haris.awan07",
     label: "Instagram",
-    color: "hover:text-pink-500 hover:border-pink-500",
+    color: "hover:text-cyan-500 hover:border-cyan-500",
   },
   {
     icon: "fiverr",
@@ -121,7 +121,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative bg-[#030014] overflow-hidden min-h-screen">
+    <div className="relative overflow-hidden min-h-screen">
       {/* Background elements */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
@@ -134,7 +134,7 @@ export default function Contact() {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <i className="fas fa-paper-plane text-indigo-400" />
+              <i className="fas fa-paper-plane text-cyan-400" />
               <span className="text-sm text-gray-300">Get in touch</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -149,7 +149,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Form */}
             <div className="order-2 lg:order-1">
-              <div className="relative p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-white/10">
+              <div className="relative p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl surface">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
 
                 {submitted ? (
@@ -188,7 +188,7 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-cyan-500 transition-colors"
                           placeholder="Your Name"
                         />
                       </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-cyan-500 transition-colors"
                           placeholder="you@example.com"
                         />
                       </div>
@@ -226,7 +226,7 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-cyan-500 transition-colors"
                         placeholder="Project Inquiry"
                       />
                     </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-cyan-500 transition-colors resize-none"
                         placeholder="Tell me about your project..."
                       />
                     </div>
@@ -253,7 +253,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      className="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-teal-500 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -271,7 +271,7 @@ export default function Contact() {
                 )}
 
                 {/* Decorative gradient */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl blur -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-3xl blur -z-10" />
               </div>
             </div>
 
@@ -296,7 +296,7 @@ export default function Contact() {
                         {info.href ? (
                           <a
                             href={info.href}
-                            className="text-sm sm:text-lg font-medium hover:text-indigo-400 transition-colors block truncate"
+                            className="text-sm sm:text-lg font-medium hover:text-cyan-400 transition-colors block truncate"
                           >
                             {info.value}
                           </a>
@@ -325,7 +325,7 @@ export default function Contact() {
                       className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-lg sm:text-xl transition-all duration-300 hover:-translate-y-1 ${social.color}`}
                     >
                       {social.icon === "fiverr" ? (
-                        <FiverrIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                        <TbBrandFiverr className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" stroke="none" />
                       ) : (
                         <i className={social.icon} />
                       )}
@@ -335,7 +335,7 @@ export default function Contact() {
               </div>
 
               {/* Availability Card */}
-              <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+              <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 border border-cyan-500/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
                   <span className="font-medium">Available for freelance</span>
@@ -348,9 +348,9 @@ export default function Contact() {
                   href="https://www.fiverr.com/happy_haris"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors w-full sm:w-auto justify-center shadow-lg shadow-[#1dbf73]/20"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary-dark)] transition-colors w-full sm:w-auto justify-center shadow-lg shadow-[var(--primary)]/20"
                 >
-                  <FiverrIcon className="w-5 h-5" />
+                  <TbBrandFiverr className="w-5 h-5" fill="currentColor" stroke="none" />
                   Hire me on Fiverr
                 </a>
               </div>
@@ -411,12 +411,12 @@ export default function Contact() {
       <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="relative p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
-            <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-cyan-500/20" />
+            <div className="absolute inset-0 bg-[var(--surface)]/70 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
 
             <div className="relative">
-              <i className="fas fa-map-marker-alt text-4xl text-indigo-400 mb-4" />
+              <i className="fas fa-map-marker-alt text-4xl text-cyan-400 mb-4" />
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Based in Karachi, Pakistan
               </h2>

@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FiverrIcon from "@/components/FiverrIcon";
+import { TbBrandFiverr } from "react-icons/tb";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ const services = [
     title: "Agentic AI Development",
     description:
       "Creating intelligent AI agents using OpenAI SDK and Python that can reason, plan, and act autonomously to solve complex problems.",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-cyan-500 to-teal-500",
   },
   {
     icon: "fas fa-palette",
@@ -38,14 +38,14 @@ const services = [
     title: "Backend Development",
     description:
       "Building scalable backend systems with RESTful APIs, database design, and server-side logic using Node.js and Python.",
-    gradient: "from-indigo-500 to-purple-500",
+    gradient: "from-cyan-500 to-teal-500",
   },
   {
     icon: "fas fa-brain",
     title: "AI Integration",
     description:
       "Integrating AI capabilities into existing applications, from chatbots to intelligent automation and data processing pipelines.",
-    gradient: "from-pink-500 to-rose-500",
+    gradient: "from-cyan-500 to-teal-500",
   },
 ];
 
@@ -104,7 +104,7 @@ const highlights = [
 
 export default function Home() {
   return (
-    <div className="relative bg-[#030014] overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Background elements */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
@@ -152,7 +152,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-white bg-[#1dbf73] hover:bg-[#19a463] transition-colors shadow-lg shadow-[#1dbf73]/20"
                 >
-                  <FiverrIcon className="w-5 h-5" />
+                  <TbBrandFiverr className="w-5 h-5" fill="currentColor" stroke="none" />
                   Hire me on Fiverr
                 </a>
               </div>
@@ -176,12 +176,12 @@ export default function Home() {
             <div className="relative animate-fade-in stagger-2">
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 {/* Gradient ring */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1 animate-spin-slow">
-                  <div className="w-full h-full rounded-full bg-[#030014]" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500 via-teal-500 to-cyan-500 p-1 animate-spin-slow">
+                  <div className="w-full h-full rounded-full bg-[var(--background)]" />
                 </div>
 
                 {/* Image */}
-                <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-[#030014]">
+                <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-[var(--surface-border)]">
                   <Image
                     src="/images/pfp.png"
                     alt="Muhammad Haris Awan"
@@ -192,7 +192,7 @@ export default function Home() {
                 </div>
 
                 {/* Floating badges */}
-                <div className="absolute -top-4 -right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
+                <div className="absolute -top-4 -right-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
                   <i className="fab fa-react mr-1 sm:mr-2" />
                   Next.js
                 </div>
@@ -200,14 +200,14 @@ export default function Home() {
                   <i className="fab fa-python mr-1 sm:mr-2" />
                   Python
                 </div>
-                <div className="absolute top-1/2 -right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
+                <div className="absolute top-1/2 -right-8 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 text-xs sm:text-sm font-medium shadow-lg animate-float">
                   <i className="fas fa-robot mr-1 sm:mr-2" />
                   Agentic AI
                 </div>
               </div>
 
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 blur-3xl" />
+              {/* Glow effect - positioned outside to not overlay image */}
+              <div className="absolute -inset-8 rounded-full bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-cyan-500/20 blur-3xl -z-10" />
             </div>
           </div>
         </div>
@@ -240,8 +240,8 @@ export default function Home() {
               <div className="space-y-4 mb-8">
                 {highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <i className={`${highlight.icon} text-indigo-400 text-sm`} />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <i className={`${highlight.icon} text-cyan-300 text-sm`} />
                     </div>
                     <p className="text-gray-300">{highlight.text}</p>
                   </div>
@@ -250,7 +250,7 @@ export default function Home() {
 
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium transition-colors group"
+                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors group"
               >
                 Learn more about me
                 <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform" />
@@ -261,15 +261,15 @@ export default function Home() {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
-                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-colors">
-                      <i className="fas fa-graduation-cap text-3xl text-indigo-500 mb-4" />
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-colors">
+                      <i className="fas fa-graduation-cap text-3xl text-cyan-400 mb-4" />
                       <h3 className="font-semibold mb-2">GIAIC Student</h3>
                       <p className="text-sm text-gray-400">
                         Agentic AI & Cloud Native
                       </p>
                     </div>
-                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-colors">
-                      <i className="fas fa-briefcase text-3xl text-purple-500 mb-4" />
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-colors">
+                      <i className="fas fa-briefcase text-3xl text-cyan-400 mb-4" />
                       <h3 className="font-semibold mb-2 text-sm leading-tight">Full-Stack AI Engineer</h3>
                       <p className="text-xs text-gray-400 mt-1">WEBXES LLC 2026</p>
                     </div>
@@ -282,8 +282,8 @@ export default function Home() {
                         OpenAI SDK & Python
                       </p>
                     </div>
-                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-pink-500/50 transition-colors">
-                      <i className="fas fa-layer-group text-3xl text-pink-500 mb-4" />
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-colors">
+                      <i className="fas fa-layer-group text-3xl text-cyan-400 mb-4" />
                       <h3 className="font-semibold mb-2">20+ Skills</h3>
                       <p className="text-sm text-gray-400">
                         Full-stack & AI expertise
@@ -292,7 +292,7 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Background glow */}
-                <div className="absolute -inset-10 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10" />
+                <div className="absolute -inset-10 bg-gradient-to-r from-cyan-500/10 to-teal-500/10 rounded-3xl blur-3xl -z-10" />
               </div>
             </div>
           </div>
@@ -369,26 +369,25 @@ export default function Home() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent" />
                 </div>
-                <div className="relative p-6">
+                <div className="relative p-6 bg-[var(--surface)] border border-[var(--surface-border)] rounded-b-2xl">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2 text-[var(--foreground)] group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-[var(--foreground-secondary)] text-sm leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="flex items-center gap-2 mt-4 text-sm text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-2 mt-4 text-sm text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
                     View Project
                     <i className="fas fa-external-link-alt" />
                   </div>
@@ -404,8 +403,8 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl">
           <div className="relative p-6 sm:p-12 md:p-16 rounded-2xl sm:rounded-3xl overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
-            <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-cyan-500/20" />
+            <div className="absolute inset-0 bg-[var(--surface)]/70 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
 
             <div className="relative text-center">
@@ -436,8 +435,8 @@ export default function Home() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-500/30 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-500/30 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl" />
           </div>
         </div>
       </section>

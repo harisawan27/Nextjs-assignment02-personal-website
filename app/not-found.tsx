@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export default function NotFound() {
   return (
-    <div className="relative bg-[#030014] overflow-hidden min-h-screen">
+    <div className="relative overflow-hidden min-h-screen">
       {/* Background elements */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
@@ -19,7 +19,7 @@ export default function NotFound() {
             <h1 className="text-[8rem] sm:text-[12rem] md:text-[16rem] font-black leading-none gradient-text select-none">
               404
             </h1>
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 blur-3xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-teal-500/20 to-cyan-500/20 blur-3xl -z-10" />
           </div>
 
           {/* Message */}
@@ -56,9 +56,9 @@ export default function NotFound() {
           </div>
 
           {/* Decorative floating elements */}
-          <div className="absolute top-1/4 left-10 w-2 h-2 rounded-full bg-indigo-500 animate-float opacity-50" />
-          <div className="absolute top-1/3 right-16 w-3 h-3 rounded-full bg-purple-500 animate-float-delayed opacity-40" />
-          <div className="absolute bottom-1/4 left-1/4 w-2 h-2 rounded-full bg-pink-500 animate-float opacity-30" />
+          <div className="absolute top-1/4 left-10 w-2 h-2 rounded-full bg-cyan-500 animate-float opacity-50" />
+          <div className="absolute top-1/3 right-16 w-3 h-3 rounded-full bg-teal-500 animate-float-delayed opacity-40" />
+          <div className="absolute bottom-1/4 left-1/4 w-2 h-2 rounded-full bg-cyan-500 animate-float opacity-30" />
         </div>
       </section>
 

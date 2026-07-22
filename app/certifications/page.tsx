@@ -12,7 +12,7 @@ const PdfThumbnail = dynamic(() => import("@/components/PdfThumbnail"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center bg-gray-800/50">
-      <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+      <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />
     </div>
   ),
 });
@@ -47,7 +47,7 @@ const certificates: Certificate[] = [
     category: "Entrepreneurship",
     file: "/my-certificates/DSTP Startup Strategies And Entrepreneurship Certificate.pdf",
     type: "pdf",
-    color: "from-violet-500 to-indigo-500",
+    color: "from-cyan-500 to-teal-500",
   },
   {
     id: 3,
@@ -68,7 +68,7 @@ const certificates: Certificate[] = [
     category: "Programming",
     file: "/my-certificates/Coursera TWUTZW67NQU7.pdf",
     type: "pdf",
-    color: "from-blue-600 to-indigo-600",
+    color: "from-cyan-500 to-teal-500",
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ const certificates: Certificate[] = [
     category: "Professional Development",
     file: "/my-certificates/DSTP Freelancing Certificate.pdf",
     type: "pdf",
-    color: "from-purple-500 to-pink-500",
+    color: "from-cyan-500 to-teal-500",
   },
   {
     id: 10,
@@ -108,7 +108,7 @@ const certificates: Certificate[] = [
     category: "Design",
     file: "/my-certificates/DSTP Graphic Design Certificate.pdf",
     type: "pdf",
-    color: "from-pink-500 to-rose-500",
+    color: "from-cyan-500 to-teal-500",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function Certifications() {
   };
 
   return (
-    <div className="relative bg-[#030014] overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Background elements */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
@@ -139,7 +139,7 @@ export default function Certifications() {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <i className="fas fa-certificate text-indigo-400" />
+              <i className="fas fa-certificate text-cyan-400" />
               <span className="text-sm text-gray-300">Professional Credentials</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -180,7 +180,7 @@ export default function Certifications() {
               <div
                 key={cert.id}
                 onClick={() => openModal(cert)}
-                className="group relative rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden hover:border-indigo-500/30 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+                className="group relative rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
                 {/* Certificate Preview */}
                 <div className="relative h-56 overflow-hidden bg-gray-900">
@@ -223,10 +223,10 @@ export default function Certifications() {
                     <i className="fas fa-calendar" />
                     <span>{cert.date}</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 group-hover:text-indigo-400 transition-colors line-clamp-2">
+                  <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 group-hover:text-cyan-400 transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
-                  <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-indigo-400">
+                  <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-cyan-400">
                     <span>Click to Preview</span>
                     <i className="fas fa-arrow-right text-xs" />
                   </div>
@@ -241,8 +241,8 @@ export default function Certifications() {
       <section className="relative py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="relative p-6 sm:p-12 rounded-2xl sm:rounded-3xl overflow-hidden text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20" />
-            <div className="absolute inset-0 bg-[#030014]/50 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-cyan-500/20" />
+            <div className="absolute inset-0 bg-[var(--surface)]/70 backdrop-blur-xl" />
             <div className="absolute inset-0 border border-white/10 rounded-3xl" />
 
             <div className="relative">

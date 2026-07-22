@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<string>("dark");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -17,6 +18,24 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // initialize theme from localStorage or prefers-color-scheme
+    const stored = typeof window !== "undefined" ? localStorage.getItem("site-theme") : null;
+    const prefersLight = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initial = stored || (prefersLight ? "light" : "dark");
+    setTheme(initial);
+    if (typeof document !== "undefined") document.documentElement.setAttribute("data-theme", initial);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "light" ? "dark" : "light";
+    setTheme(next);
+    if (typeof document !== "undefined") document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem("site-theme", next);
+    } catch (e) {}
+  };
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -37,14 +56,14 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "py-3 bg-[#030014]/80 backdrop-blur-xl border-b border-white/5"
+          ? "py-3 bg-[var(--surface)]/95 backdrop-blur-xl border-b border-[var(--surface-border)]"
           : "py-5 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="group">
-          <span className="text-xl font-bold text-white tracking-tight transition-opacity duration-300 group-hover:opacity-80">
+          <span className="text-xl font-bold text-[var(--foreground)] tracking-tight transition-opacity duration-300 group-hover:opacity-80">
             Haris Awan
           </span>
         </Link>
@@ -57,12 +76,12 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
                   isActive(link.href)
-                    ? "text-white"
-                    : "text-gray-400 hover:text-white"
+                    ? "text-[var(--foreground)]"
+                    : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)]"
                 }`}
               >
                 {isActive(link.href) && (
-                  <span className="absolute inset-0 rounded-xl bg-white/5 border border-white/10" />
+                  <span className="absolute inset-0 rounded-xl bg-[var(--surface-strong)] border border-[var(--surface-border)] shadow-sm" />
                 )}
                 <span className="relative">{link.label}</span>
               </Link>
@@ -73,7 +92,7 @@ export default function Navbar() {
               href="https://github.com/harisawan27"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:opacity-90 transition-opacity"
             >
               <i className="fab fa-github" />
               GitHub
@@ -83,18 +102,27 @@ export default function Navbar() {
             <a
               href="/Muhammad%20Haris%20Awan%20(CV).pdf"
               download
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:opacity-90 transition-opacity"
               aria-label="Download CV (PDF)"
             >
               <i className="fas fa-download" />
               CV
             </a>
           </li>
+          <li className="ml-2">
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="w-10 h-10 flex items-center justify-center rounded-xl bg-[var(--surface-strong)] border border-[var(--surface-border)] text-[var(--foreground-secondary)] shadow-sm transition-all duration-300 hover:bg-[var(--surface-soft)] hover:text-[var(--primary)]"
+            >
+              {theme === "light" ? <i className="fas fa-sun text-yellow-500" /> : <i className="fas fa-moon text-cyan-500" />}
+            </button>
+          </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10"
+          className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-[var(--surface-strong)] border border-[var(--surface-border)] text-[var(--foreground)] shadow-sm transition-colors hover:bg-[var(--surface-soft)]"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -120,7 +148,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#030014]/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-[var(--surface)]/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${
           isOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-4"
@@ -133,8 +161,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                   isActive(link.href)
-                    ? "text-white bg-white/5"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                    ? "text-[var(--foreground)] bg-[var(--surface-strong)]"
+                    : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--surface-soft)]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -147,7 +175,7 @@ export default function Navbar() {
               href="https://github.com/harisawan27"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium bg-gradient-to-r from-cyan-500 to-teal-500 text-white"
               onClick={() => setIsOpen(false)}
             >
               <i className="fab fa-github" />
@@ -158,7 +186,7 @@ export default function Navbar() {
             <a
               href="/Muhammad%20Haris%20Awan%20(CV).pdf"
               download
-              className="flex items-center justify-center gap-2 mt-3 px-5 py-3 rounded-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+              className="flex items-center justify-center gap-2 mt-3 px-5 py-3 rounded-xl font-medium bg-gradient-to-r from-cyan-500 to-teal-500 text-white"
               onClick={() => setIsOpen(false)}
               aria-label="Download CV (PDF)"
             >
