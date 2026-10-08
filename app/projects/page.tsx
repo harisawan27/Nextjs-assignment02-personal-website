@@ -26,11 +26,11 @@ const projects = [
     featured: true,
   },
   {
-    title: "Boardroom AI - Executive Decision Engine",
+    title: "Mashwara AI - Multilingual Executive Decision Engine",
     description:
-      "A multi-agent decision engine that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured executive reports.",
-    image: "/images/boardroom_ai.png",
-    link: "https://boardroom-ai-duologic.vercel.app/",
+      "A multilingual agentic decision-support platform for Pakistan that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured, evidence-backed consultations.",
+    image: "/images/mashwara_ai.png",
+    link: "https://mashwara-ai.vercel.app/",
     category: "web-app",
     tags: ["Google ADK", "Agentic AI", "FastAPI", "React"],
     featured: true,
