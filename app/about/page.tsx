@@ -258,7 +258,7 @@ export default function About() {
                   <span>View My Work</span>
                 </Link>
                 <a
-                  href="/Muhammad%20Haris%20Awan%20(CV).pdf"
+                  href="/Muhammad%20Haris%20Awan%20CV.pdf"
                   download
                   className="btn-secondary"
                 >

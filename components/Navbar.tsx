@@ -101,7 +101,7 @@ export default function Navbar() {
           </li>
           <li className="ml-2">
             <a
-              href="/Muhammad%20Haris%20Awan%20(CV).pdf"
+              href="/Muhammad%20Haris%20Awan%20CV.pdf"
               download
               className="flex items-center gap-2 px-4 py-2.5 rounded-full font-medium text-sm bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:opacity-90 transition-opacity"
               aria-label="Download CV (PDF)"
@@ -182,7 +182,7 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="/Muhammad%20Haris%20Awan%20(CV).pdf"
+              href="/Muhammad%20Haris%20Awan%20CV.pdf"
               download
               className="flex items-center justify-center gap-2 mt-3 px-5 py-3 rounded-full font-medium bg-gradient-to-r from-cyan-500 to-teal-500 text-white"
               onClick={() => setIsOpen(false)}
