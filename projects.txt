@@ -69,3 +69,11 @@
   **Tags:** Next.js, React, Tailwind
   **Featured:** yes
   **Image:** webxes.png
+
+**Project Name:** Karachi Run - 3D Endless Runner
+  **Description:** A mobile-first, browser-based 3D endless runner inspired by Karachi. Sprint through a stylized city, weave between buses and rickshaws, ride rooftop ramps, collect coins, and follow a route from Saddar to Sea View.
+  **Live Link:** https://karachi-run.vercel.app/
+  **Category:** games
+  **Tags:** Babylon.js, WebGL, Vite, Neon Postgres
+  **Featured:** yes
+  **Image:** karachi_run.png

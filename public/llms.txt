@@ -49,6 +49,11 @@ A comprehensive guide for engineering students and professionals in humanoid rob
 - **URL:** https://q4-book-hackathon-1.vercel.app/
 - **Tech:** Docusaurus, FastAPI, Qdrant Cloud
 
+### Karachi Run — 3D Endless Runner
+A mobile-first, browser-based 3D endless runner inspired by Karachi. Sprint through a stylized city, weave between buses and rickshaws, ride rooftop ramps, collect coins, and follow a route from Saddar to Sea View.
+- **URL:** https://karachi-run.vercel.app/
+- **Tech:** Babylon.js, WebGL, Vite, Neon Postgres
+
 ## Education
 
 - **GIAIC — Agentic AI Program** (2024–Present): Advancing skills in Agentic AI, building intelligent agents using OpenAI SDK in Python.
