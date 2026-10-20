@@ -47,9 +47,17 @@ const timeline = [
     year: "2026 - Present",
     title: "Full-Stack AI Engineer at WEBXES LLC",
     description:
-      "Architecting and deploying AI-driven full-stack web applications using Next.js, Python, and OpenAI SDK. Designing autonomous agents to automate workflows and delivering scalable, AI-enhanced solutions for clients.",
+      "Engineer Agentic AI workflows, LLM-powered features, and full-stack client products using Next.js, FastAPI, React, and modern AI tooling. Designed and built webxes.com, achieving Lighthouse scores of 98 Performance, 95 Accessibility, 100 Best Practices, and 100 SEO.",
     type: "work",
     icon: "fas fa-rocket",
+  },
+  {
+    year: "2024 - 2026",
+    title: "Full-Stack Web Developer at WEBXES Tech",
+    description:
+      "Built responsive websites and e-commerce platforms across React, Next.js, Tailwind CSS, and WordPress, integrating APIs and delivering SEO-focused digital products.",
+    type: "work",
+    icon: "fas fa-laptop-code",
   },
   {
     year: "2024 - Present",
@@ -214,7 +222,7 @@ export default function About() {
               <ul className="text-gray-400 text-left list-disc list-inside mb-6 space-y-2">
                 <li><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript.</li>
                 <li><strong>Backend:</strong> Node.js, Python, FastAPI, SQLModel.</li>
-                <li><strong>AI &amp; Agentic Systems:</strong> OpenAI Agent SDK, OpenAI AgentKit, Claude Code, n8n, autonomous agent design, AI logic, and automation.</li>
+                <li><strong>AI &amp; Agentic Systems:</strong> OpenAI Agent SDK, OpenAI AgentKit, Claude Code, n8n, RAG, MCP, autonomous agent design, AI logic, and automation.</li>
                 <li><strong>Databases:</strong> Sanity, Firebase, Neon PostgreSQL.</li>
                 <li><strong>Tools &amp; Platforms:</strong> Git, GitHub, Vercel, Hostinger, WordPress, Figma, Canva, VS Code.</li>
               </ul>

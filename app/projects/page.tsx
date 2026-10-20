@@ -36,6 +36,16 @@ const projects = [
     featured: true,
   },
   {
+    title: "Karachi Run",
+    description:
+      "A mobile-first, browser-based 3D endless runner inspired by Karachi. Sprint through a stylized city, weave between buses and rickshaws, ride rooftop ramps, collect coins, and follow a route from Saddar to Sea View.",
+    image: "/images/karachi_run.png",
+    link: "https://karachi-run.vercel.app/",
+    category: "games",
+    tags: ["Babylon.js", "WebGL", "Vite", "Neon Postgres"],
+    featured: true,
+  },
+  {
     title: "WEBXES LLC - High-Performance US-Based Agency",
     description:
       "WEBXES is a modern web design & development partner that build scalable websites, ecommerce platforms, and apps.",
@@ -375,13 +385,24 @@ export default function Projects() {
                   )}
 
                   {/* Image */}
-                  <div className="relative h-52 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+                  <div className="relative h-52 overflow-hidden bg-gradient-to-br from-cyan-950/40 via-slate-900 to-teal-950/40">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
+                        <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                          <i className="fas fa-gamepad text-2xl text-cyan-400" />
+                        </div>
+                        <span className="text-xs font-medium text-cyan-300/80 tracking-wide uppercase">
+                          3D Browser Game
+                        </span>
+                      </div>
+                    )}
                     {/* Hover overlay with icon */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
@@ -493,13 +514,24 @@ export default function Projects() {
             </button>
 
             {/* Modal Image */}
-            <div className="relative h-48 sm:h-64 md:h-80">
-              <Image
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                fill
-                className="object-cover rounded-t-2xl sm:rounded-t-3xl"
-              />
+            <div className="relative h-48 sm:h-64 md:h-80 bg-gradient-to-br from-cyan-950/50 via-slate-900 to-teal-950/50 rounded-t-2xl sm:rounded-t-3xl overflow-hidden">
+              {selectedProject.image ? (
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  fill
+                  className="object-cover rounded-t-2xl sm:rounded-t-3xl"
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-6 text-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+                    <i className="fas fa-gamepad text-3xl sm:text-4xl text-cyan-400" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-cyan-300 tracking-wide uppercase">
+                    {selectedProject.title}
+                  </span>
+                </div>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1f] via-transparent to-transparent" />
 
               {/* Featured badge */}

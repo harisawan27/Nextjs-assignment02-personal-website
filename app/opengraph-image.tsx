@@ -151,7 +151,7 @@ export default async function Image() {
             >
               {[
                 { value: "30+", label: "Projects Completed" },
-                { value: "6+", label: "Years Experience" },
+                { value: "2+", label: "Years Experience" },
                 { value: "20+", label: "Technologies" },
                 { value: "AI", label: "Powered Solutions" },
               ].map((stat) => (
