@@ -53,18 +53,18 @@ const featuredProjects = [
   {
     title: "Morph OS - Generative AI Workspace",
     description:
-      "A generative operating system that turns natural language into interactive software in seconds.",
+      "Silver Tier Winner at Google AI Seekho 2026. Generates, edits, and self-corrects React apps live in seconds with a 6-agent pipeline.",
     image: "/images/morph_os.png",
     link: "https://morph-os-haris.vercel.app/",
     tags: ["Agentic AI", "FastAPI", "React", "Next.js"],
   },
   {
-    title: "Boardroom AI - Executive Decision Engine",
+    title: "Mashwara AI - Hackathon Winner",
     description:
-      "A multi-agent decision engine that simulates a virtual board meeting with specialized AI agents.",
-    image: "/images/boardroom_ai.png",
-    link: "https://boardroom-ai-duologic.vercel.app/",
-    tags: ["Google ADK", "Agentic AI", "FastAPI"],
+      "Track Winner at Alibaba Cloud AI Hackathon Pakistan 2026. A 6-agent Google ADK platform simulating an executive council for structured consultations.",
+    image: "/images/mashwara_ai.png",
+    link: "https://mashwara-ai.vercel.app/",
+    tags: ["Google ADK", "Agentic AI", "FastAPI", "React"],
   },
   {
     title: "WEBXES LLC",

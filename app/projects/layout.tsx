@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore Muhammad Haris Awan's portfolio of 25+ projects including Morph OS, Boardroom AI, WEBXES LLC, and more — built with Next.js, FastAPI, Agentic AI, and OpenAI SDK.",
+    "Explore Muhammad Haris Awan's portfolio of 25+ projects including Morph OS, Mashwara AI, WEBXES LLC, and more — built with Next.js, FastAPI, Agentic AI, and OpenAI SDK.",
   alternates: {
     canonical: "/projects",
   },

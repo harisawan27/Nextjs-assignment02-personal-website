@@ -15,24 +15,26 @@ const categories = [
 
 const projects = [
   {
+    title: "Mashwara AI - Multilingual Executive Decision Platform",
+    description:
+      "🏆 Track Winner (Urdu & Regional Language Tech) at Alibaba Cloud AI Hackathon Pakistan 2026 ($2,000 + 1,000 Alibaba Cloud credits). Built a multi-agent decision platform simulating a virtual council of 6 specialist AI agents in parallel using Google ADK to debate, moderate, and produce structured executive consultations with live MCP web search, STT, and TTS.",
+    badge: "🏆 Hackathon Track Winner",
+    image: "/images/mashwara_ai.png",
+    link: "https://mashwara-ai.vercel.app/",
+    category: "web-app",
+    tags: ["Google ADK", "Agentic AI", "FastAPI", "React"],
+    featured: true,
+  },
+  {
     title: "Morph OS - Generative AI Workspace",
     description:
-      "A generative operating system that turns natural language into interactive software in seconds. Features a 6-agent pipeline to generate, edit, and self-correct React apps live in your browser.",
+      "🥈 Silver Tier Winner at Google AI Seekho 2026. A generative operating system routing natural language into live React apps in under 2 seconds. Architected a 6-agent pipeline (Brain planner, Builder, Editor, Critic-Fixer, Chat, Search) with self-correcting Critic-Fixer verification, SSE streaming, and pgvector semantic search.",
+    badge: "🥈 Google AI Seekho Silver",
     image: "/images/morph_os.png",
     link: "https://morph-os-haris.vercel.app/",
     demoLink: "https://youtu.be/rCgnH5MLSpk?si=a0-3OeZQIPoM9rlL",
     category: "web-app",
     tags: ["Agentic AI", "FastAPI", "React", "Next.js"],
-    featured: true,
-  },
-  {
-    title: "Mashwara AI - Multilingual Executive Decision Engine",
-    description:
-      "A multilingual agentic decision-support platform for Pakistan that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured, evidence-backed consultations.",
-    image: "/images/mashwara_ai.png",
-    link: "https://mashwara-ai.vercel.app/",
-    category: "web-app",
-    tags: ["Google ADK", "Agentic AI", "FastAPI", "React"],
     featured: true,
   },
   {
@@ -267,6 +269,7 @@ type Project = {
   category: string;
   tags: string[];
   featured?: boolean;
+  badge?: string;
   demoLink?: string;
 };
 
@@ -376,13 +379,20 @@ export default function Projects() {
                     hoveredIndex === index ? "scale-[1.02]" : ""
                   }`}
                 >
-                  {/* Featured badge */}
-                  {project.featured && (
-                    <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-xs font-semibold flex items-center gap-1">
-                      <i className="fas fa-star text-[10px]" />
-                      Featured
-                    </div>
-                  )}
+                  {/* Badges */}
+                  <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
+                    {project.badge && (
+                      <div className="px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold shadow-lg shadow-emerald-500/20 border border-emerald-400/30 flex items-center gap-1">
+                        {project.badge}
+                      </div>
+                    )}
+                    {project.featured && !project.badge && (
+                      <div className="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-xs font-semibold flex items-center gap-1">
+                        <i className="fas fa-star text-[10px]" />
+                        Featured
+                      </div>
+                    )}
+                  </div>
 
                   {/* Image */}
                   <div className="relative h-52 overflow-hidden bg-gradient-to-br from-cyan-950/40 via-slate-900 to-teal-950/40">
@@ -534,13 +544,20 @@ export default function Projects() {
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1f] via-transparent to-transparent" />
 
-              {/* Featured badge */}
-              {selectedProject.featured && (
-                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 px-2 sm:px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-[10px] sm:text-xs font-semibold flex items-center gap-1">
-                  <i className="fas fa-star text-[8px] sm:text-[10px]" />
-                  Featured
-                </div>
-              )}
+              {/* Badges */}
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex flex-wrap gap-2">
+                {selectedProject.badge && (
+                  <div className="px-2.5 sm:px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[10px] sm:text-xs font-bold shadow-lg shadow-emerald-500/20 border border-emerald-400/30 flex items-center gap-1">
+                    {selectedProject.badge}
+                  </div>
+                )}
+                {selectedProject.featured && !selectedProject.badge && (
+                  <div className="px-2 sm:px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-[10px] sm:text-xs font-semibold flex items-center gap-1">
+                    <i className="fas fa-star text-[8px] sm:text-[10px]" />
+                    Featured
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Modal Content */}

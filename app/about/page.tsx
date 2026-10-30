@@ -44,6 +44,14 @@ const techStack = [
 
 const timeline = [
   {
+    year: "2026",
+    title: "Alibaba Cloud AI Hackathon Pakistan & Google AI Seekho Winner",
+    description:
+      "Won the Urdu & Regional Language Tech Track at Pakistan's largest-ever AI hackathon (Alibaba Cloud AI Hackathon Pakistan 2026) with Mashwara AI, earning $2,000 + $1,000 cloud credits and recognition across Bano Qabil & Alkhidmat Foundation. Also secured Silver Tier Winner in Google AI Seekho 2026 with Morph OS.",
+    type: "award",
+    icon: "fas fa-trophy",
+  },
+  {
     year: "2026 - Present",
     title: "Full-Stack AI Engineer at WEBXES LLC",
     description:
@@ -173,7 +181,7 @@ export default function About() {
               About <span className="gradient-text">Me</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Full-Stack AI Engineer building multi-agent systems in production
+              Full-Stack AI Engineer building award-winning agentic AI systems in production
             </p>
           </div>
 
@@ -208,13 +216,12 @@ export default function About() {
                 Full-Stack AI Engineer
               </p>
                 <p className="text-gray-400 text-lg leading-relaxed mb-6 text-left">
-                  I am a Full-Stack AI Engineer based in Karachi. I specialize in building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures, using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK.
+                  I am a Full-Stack AI Engineer based in Karachi building award-winning agentic AI systems in production. I specialize in multi-agent orchestration, RAG pipelines, autonomous code generation, intelligent decision systems, and real-time streaming architectures using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK.
                 </p>
 
               <div className="text-gray-400 mb-6">
                   <p className="mb-4 text-left">
-                    Currently, I am advancing my skills at the <span className="font-bold">Governor Initiative of Artificial Intelligence Course (GIAIC)</span>, focusing on building autonomous agents. I also spearhead the architecture and deployment of multi-agent generative workspaces and intelligent decision engines at
-                    <span className="font-bold"> WEBXES LLC</span>.
+                    I am the creator of <span className="font-bold text-white">Mashwara AI</span> (Track Winner at the Alibaba Cloud AI Hackathon Pakistan 2026 — Pakistan&apos;s largest AI hackathon) and <span className="font-bold text-white">Morph OS</span> (Silver Tier Winner at Google AI Seekho 2026). Currently advancing my skills at the <span className="font-bold">Governor Initiative of Artificial Intelligence Course (GIAIC)</span> while spearheading the architecture and deployment of agentic AI workflows and client products at <span className="font-bold">WEBXES LLC</span>.
                   </p>
               </div>
 
@@ -222,7 +229,7 @@ export default function About() {
               <ul className="text-gray-400 text-left list-disc list-inside mb-6 space-y-2">
                 <li><strong>Frontend:</strong> React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript.</li>
                 <li><strong>Backend:</strong> Node.js, Python, FastAPI, SQLModel.</li>
-                <li><strong>AI &amp; Agentic Systems:</strong> OpenAI Agent SDK, OpenAI AgentKit, Claude Code, n8n, RAG, MCP, autonomous agent design, AI logic, and automation.</li>
+                <li><strong>AI &amp; Agentic Systems:</strong> Google ADK, Gemini, OpenAI Agents SDK, OpenAI AgentKit, Codex, Antigravity, Claude Code, RAG, MCP, n8n, multi-agent orchestration.</li>
                 <li><strong>Databases:</strong> Sanity, Firebase, Neon PostgreSQL.</li>
                 <li><strong>Tools &amp; Platforms:</strong> Git, GitHub, Vercel, Hostinger, WordPress, Figma, Canva, VS Code.</li>
               </ul>
@@ -414,9 +421,9 @@ export default function About() {
                   }`}
                 >
                   <div
-                    className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
-                      item.type === "work"
-                        ? "bg-cyan-500/20 text-cyan-300"
+                    className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
+                      item.type === "award"
+                        ? "bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-300 border border-amber-500/30"
                         : "bg-cyan-500/20 text-cyan-300"
                     }`}
                   >

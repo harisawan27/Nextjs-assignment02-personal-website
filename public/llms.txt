@@ -1,65 +1,92 @@
 # Muhammad Haris Awan — llms.txt
 
-> Full-Stack AI Engineer | Agentic AI Engineer | Freelancer on Fiverr
+> Full-Stack AI Engineer | Agentic AI Specialist | Hackathon Winner | Freelancer on Fiverr
 
 ## Identity
 
 - **Full Name:** Muhammad Haris Awan
 - **Also Known As:** Haris Awan, M. Haris Awan, happy_haris (Fiverr)
-- **Title:** Full-Stack AI Engineer & Agentic AI Engineer
+- **Title:** Full-Stack AI Engineer & Agentic AI Specialist
 - **Location:** Karachi, Pakistan
 - **Company:** WEBXES LLC (Full-Stack AI Engineer, 2026–Present)
+- **Website:** https://harisawan.vercel.app
+- **Email:** haris@webxes.com
+- **WhatsApp:** +92 336 1232724
 
 ## Professional Summary
 
-Muhammad Haris Awan is a Full-Stack AI Engineer based in Karachi, Pakistan. He specializes in building multi-agent systems in production—from intent routing and self-correcting agent loops to real-time streaming architectures—using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK. He is currently advancing his skills at the Governor Initiative for Artificial Intelligence Course (GIAIC) and spearheads the architecture and deployment of AI-driven web applications at WEBXES LLC.
+Muhammad Haris Awan is a Full-Stack AI Engineer based in Karachi, Pakistan, specializing in building award-winning multi-agent AI systems in production. His core expertise spans multi-agent orchestration, self-correcting agent loops, RAG pipelines, autonomous code generation, intelligent decision-making systems, and real-time SSE streaming architectures using Next.js, FastAPI, Google ADK, and OpenAI Agent SDK.
+
+He is the Track Winner (Urdu & Regional Language Tech) at Pakistan's largest-ever AI hackathon—the Alibaba Cloud AI Hackathon Pakistan 2026—earning $2,000 + 1,000 Alibaba Cloud credits for Mashwara AI, with media coverage and recognition from Bano Qabil and Alkhidmat Foundation. He also achieved Silver Tier Winner in Google AI Seekho 2026 with Morph OS. He is actively advancing his expertise in the Governor Initiative for Artificial Intelligence Course (GIAIC) while spearheading client products and AI workflows at WEBXES LLC.
+
+## Honors & Awards
+
+- **Track Winner — Urdu & Regional Language Tech Track** | *Alibaba Cloud AI Hackathon Pakistan 2026*
+  - Won Pakistan's largest AI hackathon ($2,000 prize + 1,000 Alibaba Cloud credits) for creating Mashwara AI, an agentic decision council.
+- **Silver Tier Winner** | *Google AI Seekho 2026*
+  - Awarded for Morph OS, an autonomous multi-agent generative workspace routing natural language to live React applications.
 
 ## Technical Skills
 
-- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript
-- **Backend:** Node.js, Python, FastAPI, SQLModel
-- **AI & Agentic Systems:** OpenAI Agent SDK, Google ADK, Claude Code, n8n, autonomous agent design
-- **Databases:** Sanity, Firebase, Neon PostgreSQL, Qdrant Cloud
-- **Tools & Platforms:** Git, GitHub, Vercel, Docker, Hostinger, WordPress, Figma, VS Code
+- **AI & Agentic Systems:** Google ADK, Gemini 1.5/2.0, OpenAI Agents SDK, OpenAI AgentKit, Codex, Antigravity, Claude Code, RAG (Retrieval-Augmented Generation), MCP (Model Context Protocol), n8n, Multi-Agent Orchestration, Autonomous Agent Design, Prompt Engineering
+- **Frontend:** React, Next.js (App Router, Server Actions), TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3
+- **Backend:** Python, FastAPI, Node.js, SQLModel, RESTful APIs, SSE (Server-Sent Events) Streaming
+- **Databases & Vector Search:** PostgreSQL (Neon + pgvector), Qdrant Cloud, Firebase, Sanity CMS
+- **Tools & DevOps:** Git, GitHub, Vercel, Hugging Face Spaces, Docker, Figma, Canva, VS Code
+- **Methodologies:** Spec-Driven Development (SDD), AI System Orchestration, Automated Code Auditing, Cloud Native Development
 
 ## Key Projects
 
+### Mashwara AI — Multilingual Executive Decision Platform
+🏆 **Track Winner at Alibaba Cloud AI Hackathon Pakistan 2026 ($2,000 + 1,000 Alibaba Cloud credits)**
+A multilingual agentic decision-support platform designed for Pakistan. Simulates a virtual council of 6 specialized AI agents running in parallel via Google ADK to debate, critique, and produce structured, voted executive consultations. Includes a custom MCP web-search tool for live market intelligence, file attachment support, STT, and TTS.
+- **URL:** https://mashwara-ai.vercel.app/
+- **Tech:** Google ADK, Agentic AI, FastAPI, React, Next.js, MCP
+
 ### Morph OS — Generative AI Workspace
-A generative operating system that turns natural language into interactive software in seconds. Features a 6-agent pipeline to generate, edit, and self-correct React apps live in the browser.
+🥈 **Silver Tier Winner at Google AI Seekho 2026**
+A generative operating system that routes natural language into interactive React applications in under 2 seconds via a 34-template cache layer. Features a 6-agent pipeline (Brain planner, Builder, Editor, Critic-Fixer, Chat, Search) with a self-correcting Critic-Fixer loop that verifies and auto-repairs generated code, thread-safe SSE streaming, JWT/OAuth auth, and pgvector semantic search on Neon. Deployed as an installable PWA.
 - **URL:** https://morph-os-haris.vercel.app/
-- **Tech:** Agentic AI, FastAPI, React, Next.js
+- **Demo Video:** https://youtu.be/rCgnH5MLSpk?si=a0-3OeZQIPoM9rlL
+- **Tech:** Agentic AI, Gemini SDK, FastAPI, React, Next.js, pgvector, PWA
 
-### Boardroom AI — Executive Decision Engine
-A multi-agent decision engine that simulates a virtual board meeting. Uses 6 specialized AI agents running in parallel to analyze, debate, and produce structured executive reports.
-- **URL:** https://boardroom-ai-duologic.vercel.app/
-- **Tech:** Google ADK, Agentic AI, FastAPI, React
+### Karachi Run — 3D Endless Runner
+A mobile-first, browser-based 3D endless runner inspired by the sights of Karachi. Sprint through a stylized city, weave between buses and rickshaws, ride rooftop ramps, collect coins, and follow an iconic route from Saddar to Sea View.
+- **URL:** https://karachi-run.vercel.app/
+- **Tech:** Babylon.js, WebGL, Vite, Neon Postgres
 
-### WEBXES LLC — US-Based Web Agency
-A modern web design & development partner that builds scalable websites, ecommerce platforms, and apps.
+### WEBXES LLC — US-Based Web Agency Platform
+A modern web design & development partner that builds scalable websites, ecommerce platforms, and apps. Designed and engineered webxes.com, achieving Lighthouse scores of 98 Performance, 95 Accessibility, 100 Best Practices, and 100 SEO.
 - **URL:** https://www.webxes.com/
 - **Tech:** Next.js, React, Tailwind CSS
 
 ### DoneKaro — AI Powered Todo App
-An AI-powered full-stack task management app with an integrated AI chatbot assistant. Available as both a web app and an Android app built with Capacitor.
+An AI-powered full-stack task management application with an integrated AI chatbot assistant. Available as both a responsive web app and an Android app built with Capacitor.
 - **URL:** https://q4-todo-hackathon.vercel.app/
-- **Tech:** Next.js, FastAPI, PostgreSQL, Capacitor
+- **Demo Video:** https://youtu.be/9hVFsnVX6pM?si=KGwXyD4wMfCfBkvo
+- **Tech:** Next.js, FastAPI, PostgreSQL (Neon), Capacitor
 
 ### Physical AI & Humanoid Robotics — Capstone Book
-A comprehensive guide for engineering students and professionals in humanoid robotics, physical AI, and robot learning, built with Docusaurus and featuring a RAG Chatbot.
+A comprehensive guide for engineering students and professionals in humanoid robotics, physical AI, and robot learning, built with Docusaurus and featuring a RAG Chatbot powered by FastAPI, Google Gemini, Neon Postgres, and Qdrant Cloud.
 - **URL:** https://q4-book-hackathon-1.vercel.app/
-- **Tech:** Docusaurus, FastAPI, Qdrant Cloud
+- **Demo Video:** https://youtu.be/f7M5I0qJ5A4?si=Lv-w6Kx48bHjmetN
+- **Tech:** Docusaurus, FastAPI, Google Gemini, Qdrant Cloud, Neon Postgres
 
-### Karachi Run — 3D Endless Runner
-A mobile-first, browser-based 3D endless runner inspired by Karachi. Sprint through a stylized city, weave between buses and rickshaws, ride rooftop ramps, collect coins, and follow a route from Saddar to Sea View.
-- **URL:** https://karachi-run.vercel.app/
-- **Tech:** Babylon.js, WebGL, Vite, Neon Postgres
+## Experience
+
+- **Full-Stack AI Engineer** | *WEBXES LLC* (2026 – Present)
+  - Engineer Agentic AI workflows, LLM-powered features, and full-stack client products using Next.js, FastAPI, React, and modern AI tooling.
+  - Designed and built webxes.com, achieving 98+ Lighthouse scores across all metrics.
+- **Full-Stack Web Developer** | *WEBXES Tech* (2024 – 2026)
+  - Built responsive websites and e-commerce platforms across React, Next.js, Tailwind CSS, and WordPress, integrating APIs and delivering SEO-focused digital products.
 
 ## Education
 
-- **GIAIC — Agentic AI Program** (2024–Present): Advancing skills in Agentic AI, building intelligent agents using OpenAI SDK in Python.
-- **Intermediate in Humanities** (Completed 2026): Board of Intermediate Education, Karachi (BIEK).
+- **Agentic AI Engineer** | *Governor Initiative of Artificial Intelligence Course (GIAIC)* (Ongoing)
+  - Advancing skills in Agentic AI, multi-agent systems, and autonomous agent orchestration using OpenAI Agents SDK and Python.
+- **Intermediate in Humanities** | *Board of Intermediate Education, Karachi (BIEK)* (Completed 2026)
 
-## Links
+## Contact & Links
 
 - **Portfolio:** https://harisawan.vercel.app
 - **GitHub:** https://github.com/harisawan27
@@ -71,6 +98,9 @@ A mobile-first, browser-based 3D endless runner inspired by Karachi. Sprint thro
 - **Email:** haris@webxes.com
 - **WhatsApp:** +92 336 1232724
 
-## Availability
+## Availability for Hire
 
-Muhammad Haris Awan is currently available for freelance projects, remote full-time roles, and collaborations in AI-powered web development and agentic AI engineering. You can hire him directly on Fiverr at https://www.fiverr.com/happy_haris or contact him via email at haris@webxes.com.
+Muhammad Haris Awan is currently open for:
+- Full-Stack AI Engineer & Agentic AI roles (remote or on-site)
+- Freelance and contract projects on Fiverr (https://www.fiverr.com/happy_haris)
+- Multi-agent AI workflow consulting, RAG pipeline implementations, and custom web applications

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
   // SEO-optimized description (158 chars)
   description:
-    "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
+    "Award-winning Full-Stack AI Engineer building multi-agent systems in production. Creator of Mashwara AI (Alibaba Hackathon Winner) & Morph OS (Google AI Seekho).",
 
   // High-value keywords
   keywords: [
@@ -52,7 +52,14 @@ export const metadata: Metadata = {
     "Freelance AI Engineer",
     "WEBXES LLC",
     "Morph OS",
-    "Boardroom AI",
+    "Mashwara AI",
+    "Alibaba Cloud Hackathon Winner",
+    "Google AI Seekho",
+    "Alibaba Cloud AI Hackathon Pakistan",
+    "Agentic AI Developer",
+    "Multi-Agent Orchestration",
+    "MCP",
+    "Model Context Protocol",
   ],
 
   // Author info
@@ -86,7 +93,7 @@ export const metadata: Metadata = {
     siteName: "Haris Awan Portfolio",
     title: "Haris Awan | Full-Stack AI Engineer",
     description:
-      "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
+      "Award-winning Full-Stack AI Engineer building multi-agent systems in production. Creator of Mashwara AI (Alibaba Hackathon Winner) & Morph OS (Google AI Seekho).",
     images: [
       {
         url: "/opengraph-image",
@@ -102,7 +109,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Haris Awan | Full-Stack AI Engineer",
     description:
-      "Full-Stack AI Engineer building multi-agent systems in production, from intent routing and self-correcting agent loops to real-time streaming architectures.",
+      "Award-winning Full-Stack AI Engineer building multi-agent systems in production. Creator of Mashwara AI (Alibaba Hackathon Winner) & Morph OS (Google AI Seekho).",
     images: ["/twitter-image"],
     creator: "@haris_awan07",
   },
@@ -119,6 +126,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM context" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -143,12 +151,21 @@ export default function RootLayout({
               knowsAbout: [
                 "Full Stack Development",
                 "Agentic AI",
+                "Multi-Agent Systems",
+                "Google ADK",
+                "OpenAI Agent SDK",
+                "FastAPI",
                 "Next.js",
                 "React",
                 "Python",
                 "TypeScript",
-                "OpenAI",
-                "Web Development",
+                "Model Context Protocol (MCP)",
+                "Retrieval-Augmented Generation (RAG)",
+                "Babylon.js",
+              ],
+              award: [
+                "Track Winner (Urdu & Regional Language Tech) - Alibaba Cloud AI Hackathon Pakistan 2026",
+                "Silver Tier Winner - Google AI Seekho 2026"
               ],
               worksFor: {
                 "@type": "Organization",
